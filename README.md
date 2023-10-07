@@ -1,6 +1,6 @@
 # Business Card Generator Website Project #
 
-This is website that allows the users to create their business cards.
+This is a website that allows the users to create their business cards.
 
 ## Institution Info ##
 
