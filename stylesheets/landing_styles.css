@@ -3,18 +3,20 @@
 /* font-family: 'Inter', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-html, body {
+html,
+body {
     /* Sets the website to always occupy 100% of the height of the viewport */
-    height : 100%;
+    height: 100%;
 }
+
 body {
     /* Sets the website to Flexbox */
     display: flex;
     flex-direction: column;
-    
+
     /* Sets the default font-size of the website */
     font-size: 20px;
-    
+
     /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
@@ -24,9 +26,10 @@ body {
 .main-header {
     flex: 0 1 auto;
 }
+
 .logo-text {
     padding: 5px 0px;
-    
+
     background: white;
     color: black;
     text-align: center;
@@ -42,34 +45,35 @@ body {
     flex-direction: row;
     margin-bottom: 25px;
 }
+
 .button {
     outline: none;
     border-style: none;
     border-radius: 25px;
-    padding: 20px 0px;
-    width: 240px;
+    padding: 10px 20px;
+    width: auto;
     cursor: pointer;
-    
+
     background: white;
     color: black;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
 }
+
 #loginButton {
-    margin-left: 80px;
-    margin-right: 40px;
+    margin-right: 10px;
 }
+
 #signupButton {
-    margin-left: 40px;
-    margin-right: 80px;
+    margin-left: 10px;
 }
 
 /* Add hover effect for the buttons */
 .button:hover {
-    background: #3498db; /* Change the background color on hover */
-    color: #fff; /* Change the text color on hover */
+    background: #3498db;
+    color: #fff;
 }
 
 /* Sets flexbox properties of main content */
@@ -88,16 +92,16 @@ body {
     width: 805px;
     height: 460px;
     margin-right: 40px;
-    
+
     border-radius: 30px;
     border: 1px solid #000;
     background: #2A292C;
 }
 
-/* Add this CSS to your existing CSS */
+/* Add hover effect for the business card */
 .business-card-container:hover {
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); /* Add a box-shadow on hover to create a glowing effect */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the box-shadow effect */
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
 }
 
 /* Styling for Advertisement Phrase */
