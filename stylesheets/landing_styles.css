@@ -1,17 +1,64 @@
+/* font-family: 'ADLaM Display'; */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 html, body {
-    /*Sets the website to always occupy 100% of the height of the viewport*/
+    /* Sets the website to always occupy 100% of the height of the viewport */
     height : 100%;
 }
-
 body {
-    /*Sets the website to Flexbox*/
+    /* Sets the website to Flexbox */
     display: flex;
     flex-direction: column;
 
-    /*Sets the default font-size of the website*/
+    /* Sets the default font-size of the website */
     font-size: 10px;
 
-    /*Defines the gradient background of the website*/
+    /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
+}
+
+/* Styling for the logo-text */
+.main-header {
+    flex: 0 1 auto;
+}
+.logo-text {
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'ADLaM Display';
+    font-size: 40px;
+}
+
+/* Styling for the Login and Signup buttons */
+.buttons-container {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.button {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 20px 0px;
+    width: 240px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+#loginButton {
+    margin-left: 80px;
+    margin-right: 40px;
+}
+#signupButton {
+    margin-left: 40px;
+    margin-right: 80px;
 }
