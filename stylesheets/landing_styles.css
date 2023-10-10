@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 
     /* Sets the default font-size of the website */
-    font-size: 10px;
+    font-size: 20px;
 
     /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
@@ -25,6 +25,8 @@ body {
     flex: 0 1 auto;
 }
 .logo-text {
+    padding: 5px 0px;
+    
     background: white;
     color: black;
     text-align: center;
@@ -45,7 +47,6 @@ body {
     border-radius: 25px;
     padding: 20px 0px;
     width: 240px;
-    text-transform: uppercase;
     cursor: pointer;
     
     background: white;
@@ -61,4 +62,22 @@ body {
 #signupButton {
     margin-left: 40px;
     margin-right: 80px;
+}
+
+/* Sets flexbox properties of main content */
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Styling for the Business Card */
+.business-card-container {
+    /*flex-shrink: 0;*/
+    width: 700px;
+    height: 400px;
+    
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #2A292C;
 }
