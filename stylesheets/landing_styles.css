@@ -1,7 +1,7 @@
 /* font-family: 'ADLaM Display'; */
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 /* font-family: 'Inter', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 html, body {
     /* Sets the website to always occupy 100% of the height of the viewport */
@@ -11,10 +11,10 @@ body {
     /* Sets the website to Flexbox */
     display: flex;
     flex-direction: column;
-
+    
     /* Sets the default font-size of the website */
     font-size: 20px;
-
+    
     /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
@@ -40,6 +40,7 @@ body {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin-bottom: 25px;
 }
 .button {
     outline: none;
@@ -54,6 +55,7 @@ body {
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
+    font-weight: 400;
 }
 #loginButton {
     margin-left: 80px;
@@ -69,15 +71,27 @@ body {
     flex: 1 1 auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 /* Styling for the Business Card */
 .business-card-container {
-    /*flex-shrink: 0;*/
-    width: 700px;
-    height: 400px;
+    flex-shrink: 0;
+    width: 805px;
+    height: 460px;
+    margin-right: 40px;
     
     border-radius: 30px;
     border: 1px solid #000;
     background: #2A292C;
+}
+
+/* Styling for Advertisement Phrase */
+.ads-phrase {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
 }
