@@ -66,6 +66,12 @@ body {
     margin-right: 80px;
 }
 
+/* Add hover effect for the buttons */
+.button:hover {
+    background: #3498db; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+}
+
 /* Sets flexbox properties of main content */
 .main-content {
     flex: 1 1 auto;
