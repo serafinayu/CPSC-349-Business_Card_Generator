@@ -1,0 +1,17 @@
+html, body {
+    /*Sets the website to always occupy 100% of the height of the viewport*/
+    height : 100%;
+}
+
+body {
+    /*Sets the website to Flexbox*/
+    display: flex;
+    flex-direction: column;
+
+    /*Sets the default font-size of the website*/
+    font-size: 10px;
+
+    /*Defines the gradient background of the website*/
+    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    background-attachment: fixed;
+}
