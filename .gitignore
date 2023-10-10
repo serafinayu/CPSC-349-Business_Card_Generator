@@ -1,2 +1,3 @@
 # git ignore files here #
 .DS_Store
+.vscode/
