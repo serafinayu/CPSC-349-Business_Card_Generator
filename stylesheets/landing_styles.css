@@ -46,6 +46,24 @@ body {
     margin-bottom: 25px;
 }
 
+/*original button*/
+/* .button {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 20px 0px;
+    width: 240px;
+    cursor: pointer;
+    
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+} */
+
+/*resize button*/
 .button {
     outline: none;
     border-style: none;
