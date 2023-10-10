@@ -86,7 +86,8 @@ body {
 }
 
 #signupButton {
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
 }
 
 /* Add hover effect for the buttons */
