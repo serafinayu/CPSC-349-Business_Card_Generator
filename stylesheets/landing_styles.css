@@ -94,6 +94,12 @@ body {
     background: #2A292C;
 }
 
+/* Add this CSS to your existing CSS */
+.business-card-container:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5); /* Add a box-shadow on hover to create a glowing effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the box-shadow effect */
+}
+
 /* Styling for Advertisement Phrase */
 .ads-phrase {
     color: #FFFFFF;
