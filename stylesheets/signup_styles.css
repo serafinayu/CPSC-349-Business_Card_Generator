@@ -1,0 +1,115 @@
+/* font-family: 'ADLaM Display'; */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    /* Sets the website to always occupy 100% of the height of the viewport */
+    height: 100%;
+}
+
+body {
+    /* Sets the website to Flexbox */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    /* Sets the default font-size of the website */
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+color: #FFFFFF;
+    /* Defines the gradient background of the website */
+    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    background-attachment: fixed;
+}       
+
+.main-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.signup-container {
+    flex-shrink: 0;
+    display: block;
+    width: 720px;  /* proportion 1.75:1.00 */
+    height: 769px;
+    margin-right: 40px;
+    margin-bottom: 10px; /* */
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #2A292C;
+}
+
+
+.signup-container input[type="text"] {
+    width: 100%;
+}
+
+.signup {
+    width: 203px;
+    height: 61px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+    text-align: center; 
+}
+.name {
+display: block;
+position: absolute;
+width: 266px;
+height: 44px;
+left: 250px;
+top: 280px;
+
+}
+.email {
+position: absolute;
+width: 266px;
+height: 44px;
+left: 250px;
+top: 407px;
+
+}
+.password {
+position: absolute;
+width: 266px;
+height: 44px;
+left: 250px;
+top: 544px;
+}
+
+.name label,
+.email label,
+.password label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px; /* Add some space between label and input */
+    color: #FFFFFF;
+}
+
+.name input,
+.email input,
+.password input {
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000; /* You can set the color you prefer for text input */
+}
+
