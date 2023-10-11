@@ -63,11 +63,11 @@ body {
 }
 
 #loginButton {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 #signupButton {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 /* Add hover effect for the buttons */
@@ -89,8 +89,8 @@ body {
 /* Styling for the Business Card */
 .business-card-container {
     flex-shrink: 0;
-    width: 805px;
-    height: 460px;
+    width: 735px;  /* proportion 1.75:1.00 */
+    height: 420px;
     margin-right: 40px;
 
     border-radius: 30px;
@@ -124,8 +124,8 @@ body {
 
 .details-container {
     position: relative;
-    width: 425px;
-    margin-left: 25px;
+    width: 340px;
+    margin-left: 40px;
     margin-right: 25px;
 
     color: white;
@@ -168,6 +168,7 @@ body {
     position: relative;
     margin-top: 30px;
     margin-left: 60px;
+    margin-right: 60px;
 }
 
 .skills-text {
