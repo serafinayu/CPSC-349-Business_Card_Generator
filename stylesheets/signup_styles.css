@@ -3,7 +3,8 @@
 /* font-family: 'Inter', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-html, body {
+html,
+body {
     /* Sets the website to always occupy 100% of the height of the viewport */
     height: 100%;
 }
@@ -22,11 +23,11 @@ body {
     font-size: 20px;
     line-height: 24px;
 
-color: #FFFFFF;
+    color: #FFFFFF;
     /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
-}       
+}
 
 .main-container {
     flex: 1 1 auto;
@@ -36,22 +37,19 @@ color: #FFFFFF;
     flex-wrap: wrap;
     align-items: center;
 }
+
 .signup-container {
     flex-shrink: 0;
     display: block;
-    width: 720px;  /* proportion 1.75:1.00 */
+    width: 720px;
     height: 769px;
     margin-right: 40px;
-    margin-bottom: 10px; /* */
+    margin-bottom: 10px;
     border-radius: 30px;
     border: 1px solid #000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #2A292C;
-}
-
-
-.signup-container input[type="text"] {
-    width: 100%;
+    position: relative; /* Position "SIGN UP" relative to the signup container */
 }
 
 .signup {
@@ -63,53 +61,84 @@ color: #FFFFFF;
     font-size: 50px;
     line-height: 61px;
     color: #FFFFFF;
-    text-align: center; 
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
-.name {
-display: block;
-position: absolute;
-width: 266px;
-height: 44px;
-left: 250px;
-top: 280px;
 
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; 
 }
-.email {
-position: absolute;
-width: 266px;
-height: 44px;
-left: 250px;
-top: 407px;
 
-}
+.name,
+.email,
 .password {
-position: absolute;
-width: 266px;
-height: 44px;
-left: 250px;
-top: 544px;
+    display: flex;
+    flex-direction: column;  /* Changed from row to column */
+    width: 100%;
+    max-width: 40%;  
+    align-items: flex-start;  /* Aligns label and input to the left */
+    margin-right: auto;
+    margin-left: 10%;  
+    margin-bottom: 15px;  /* Adds some space between each input section */
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .name label,
 .email label,
 .password label {
-    display: block;
     font-size: 20px;
-    margin-bottom: 5px; /* Add some space between label and input */
+    margin-right: 10px;
     color: #FFFFFF;
+    margin-bottom: 5px;
 }
 
 .name input,
 .email input,
 .password input {
-    display: block;
     width: 100%;
     height: 44px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000; /* You can set the color you prefer for text input */
+    border-radius: 10px;
 }
 
+.join-button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; 
+    height: 50px;
+    margin-top: 20px; 
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.join-button:hover {
+    background-color: #0056b3;
+}
+
+.login-link {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px; 
+    color: #FFFFFF;  /* This keeps the entire text white */
+}
+
+.login-action {
+    color: #007BFF;  /* This sets the initial color for the "Login" text */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.login-action:hover {
+    color: #0056b3;  /* This changes the color on hover for the "Login" text */
+}
