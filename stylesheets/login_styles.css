@@ -1,0 +1,121 @@
+/* font-family: 'ADLaM Display'; */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    background-attachment: fixed;
+}
+
+.main-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.login-container {
+    flex-shrink: 0;
+    display: block;
+    width: 720px;
+    height: 769px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #2A292C;
+    position: relative;
+}
+
+.login-title {
+    margin: 40px;
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.email,
+.password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40%;
+    align-items: flex-start;
+    margin-right: auto;
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+.email label,
+.password label {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.email input,
+.password input {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.login-button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.signup-link {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.signup-action {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.signup-action:hover {
+    color: #0056b3;
+}

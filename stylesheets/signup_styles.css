@@ -49,41 +49,32 @@ body {
     border: 1px solid #000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background: #2A292C;
-    position: relative; /* Position "SIGN UP" relative to the signup container */
+    position: relative;
 }
 
-.signup {
-    width: 203px;
-    height: 61px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 61px;
+.signup-title {
+    margin: 40px;
+    font-size: 2em;
     color: #FFFFFF;
-    text-align: center;
-    position: absolute;
-    top: 20px;
-    left: 20px;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    margin-top: 100px; 
+    margin-top: 100px;
 }
 
 .name,
 .email,
 .password {
     display: flex;
-    flex-direction: column;  /* Changed from row to column */
+    flex-direction: column;
     width: 100%;
-    max-width: 40%;  
-    align-items: flex-start;  /* Aligns label and input to the left */
+    max-width: 40%;
+    align-items: flex-start;
     margin-right: auto;
-    margin-left: 10%;  
-    margin-bottom: 15px;  /* Adds some space between each input section */
+    margin-left: 10%;
+    margin-bottom: 15px;
     font-size: 20px;
     border: none;
     border-radius: 10px;
@@ -110,9 +101,9 @@ body {
 .join-button {
     width: 50%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     height: 50px;
-    margin-top: 20px; 
+    margin-top: 20px;
     background-color: #007BFF;
     color: #FFFFFF;
     font-size: 20px;
@@ -120,6 +111,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    display: block;
 }
 
 .join-button:hover {
@@ -129,16 +121,16 @@ body {
 .login-link {
     font-size: 16px;
     text-align: center;
-    margin-top: 10px; 
-    color: #FFFFFF;  /* This keeps the entire text white */
+    margin-top: 10px;
+    color: #FFFFFF;
 }
 
 .login-action {
-    color: #007BFF;  /* This sets the initial color for the "Login" text */
+    color: #007BFF;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .login-action:hover {
-    color: #0056b3;  /* This changes the color on hover for the "Login" text */
+    color: #0056b3;
 }
