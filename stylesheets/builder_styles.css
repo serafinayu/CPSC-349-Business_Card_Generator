@@ -13,30 +13,55 @@ body {
 
 .main-container {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    width: 100%;
+    gap: 5%;    
+}
+
+.info-section {
+    flex: 1;
+    margin-left: 0%;
+}
+
+.card-inputs {
+    flex: 2;
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+}
+
+.input-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2.2em;
     margin-bottom: 20px;
 }
 
-.card-inputs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+input, textarea {
     width: 100%;
-    gap: 20px;
-}
-
-.input-group {
-    flex-basis: 45%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 15px;
+    border: 1px solid #ccc;  
+    background: #FFFFFF; 
+    color: #000;
 }
 
 input,

@@ -10,45 +10,45 @@
 
 <body>
     <div class="main-container">
-        <h1>It only takes minutes to create your own business card!</h1>
-        <h2>Fill out form below:</h2>
 
-        <div class="card-inputs">
-            <div class="input-group">
-                <label for="first-name">First name:</label>
-                <input type="text" id="first-name" placeholder="First Name">
-            </div>
-            <div class="input-group">
-                <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" placeholder="Last Name">
-            </div>
-            <div class="input-group">
-                <label for="github">Github:</label>
-                <input type="text" id="github" placeholder="Github URL">
-            </div>
-            <div class="input-group">
-                <label for="linkedin">LinkedIn:</label>
-                <input type="text" id="linkedin" placeholder="LinkedIn URL">
-            </div>
-            <div class="input-group">
-                <label for="title">Title:</label>
-                <input type="text" id="title" placeholder="Your Position">
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" placeholder="Your Email">
-            </div>
-            <div class="input-group">
-                <label for="phone">Phone Number:</label>
-                <input type="text" id="phone" placeholder="Your Phone">
-            </div>
-            <div class="input-group">
-                <label for="skills">Skills:</label>
-                <textarea id="skills" placeholder="List your skills"></textarea>
-            </div>
+        <div class="info-section">
+            <h1>It only takes minutes to create your own business card!</h1>
         </div>
 
-        <button class="generate-card-btn">Generate Business Card</button>
+        <div class="card-inputs">
+            <h2>Fill out form below:</h2>
+
+            <div class="input-columns">
+                <div class="column">
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" placeholder="First Name">
+
+                    <label for="github">Github:</label>
+                    <input type="text" id="github" placeholder="Github Link">
+
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" placeholder="Job Title">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" placeholder="Phone Number">
+                </div>
+
+                <div class="column">
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" placeholder="Last Name">
+
+                    <label for="linkedin">LinkedIn:</label>
+                    <input type="text" id="linkedin" placeholder="LinkedIn Link">
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="Email Address">
+                </div>
+            </div>
+
+            <label for="skills">Skills:</label>
+            <textarea id="skills" placeholder="List your skills"></textarea>
+        </div>
+
     </div>
     <script src="scripts/builder_scripts.js"></script>
 </body>
