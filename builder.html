@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Card Generator - Design Your Business Card</title>
     <link rel="stylesheet" href="stylesheets/builder_styles.css">
 </head>
+
 <body>
-    <div class="card-designer">
+    <div class="main-container">
+        <h1>It only takes minutes to create your own business card!</h1>
+        <h2>Fill out form below:</h2>
+
         <div class="card-inputs">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your Name" oninput="updateCard('name', this.value)"><br>
-
-            <label for="position">Position:</label>
-            <input type="text" id="position" placeholder="Your Position" oninput="updateCard('position', this.value)"><br>
-
-            <label for="company">Company:</label>
-            <input type="text" id="company" placeholder="Your Company" oninput="updateCard('company', this.value)"><br>
-
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" placeholder="Your Phone" oninput="updateCard('phone', this.value)"><br>
-
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="Your Email" oninput="updateCard('email', this.value)"><br>
-        </div>
-
-        <div class="card-preview">
-            <div class="business-card">
-                <div class="card-name" id="card-name"></div>
-                <div class="card-position" id="card-position"></div>
-                <div class="card-company" id="card-company"></div>
-                <div class="card-phone" id="card-phone"></div>
-                <div class="card-email" id="card-email"></div>
+            <div class="input-group">
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" placeholder="First Name">
+            </div>
+            <div class="input-group">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" placeholder="Last Name">
+            </div>
+            <div class="input-group">
+                <label for="github">Github:</label>
+                <input type="text" id="github" placeholder="Github URL">
+            </div>
+            <div class="input-group">
+                <label for="linkedin">LinkedIn:</label>
+                <input type="text" id="linkedin" placeholder="LinkedIn URL">
+            </div>
+            <div class="input-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="Your Position">
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Your Email">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Your Phone">
+            </div>
+            <div class="input-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" placeholder="List your skills"></textarea>
             </div>
         </div>
-    </div>
 
+        <button class="generate-card-btn">Generate Business Card</button>
+    </div>
     <script src="scripts/builder_scripts.js"></script>
 </body>
+
 </html>
