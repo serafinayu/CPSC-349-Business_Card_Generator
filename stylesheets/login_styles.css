@@ -84,6 +84,13 @@ body {
     font-size: calc(12px + 0.5vw);
 }
 
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
 .login-button {
     width: 50%;
     margin-left: auto;
