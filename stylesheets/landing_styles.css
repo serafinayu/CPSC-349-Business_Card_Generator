@@ -188,4 +188,5 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 70px;
     font-weight: 700;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

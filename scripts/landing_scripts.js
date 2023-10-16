@@ -1,0 +1,1 @@
+/* Script not used for the landing page */
