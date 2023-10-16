@@ -38,8 +38,3 @@ function validateEmail(email) {
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return regex.test(email);
 }
-
-function storeEmail(email) {
-    // Store email in browser's local storage
-    localStorage.setItem('userEmail', email);
-}
