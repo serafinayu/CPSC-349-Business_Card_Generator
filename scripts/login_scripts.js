@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loginButton = document.querySelector('.login-button');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
     const emailError = document.getElementById('emailError');
     const passwordError = document.getElementById('passwordError');
 
-    loginButton.addEventListener('click', function(event) {
+    loginButton.addEventListener('click', function (event) {
         event.preventDefault();
-        
+
         // Clear previous messages
         emailError.textContent = "";
         emailError.style.display = "none";

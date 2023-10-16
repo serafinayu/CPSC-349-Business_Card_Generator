@@ -1,16 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const joinButton = document.querySelector('.join-button');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
-    
-    const nameError = createErrorMessage('nameError', nameInput);
-    const emailError = createErrorMessage('emailError', emailInput);
-    const passwordError = createErrorMessage('passwordError', passwordInput);
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
 
-    joinButton.addEventListener('click', function(event) {
+    joinButton.addEventListener('click', function (event) {
         event.preventDefault();
-        
+
         // Clear previous messages
         nameError.textContent = "";
         nameError.style.display = "none";
@@ -20,28 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
         passwordError.style.display = "none";
 
         // Name validation
-        if (nameInput.value.trim() === "") {
-            nameError.textContent = "Please enter your name!";
+        if (!nameInput.value.trim()) {
+            nameError.textContent = "Name is required!";
             nameError.style.display = "block";
             return;
         }
 
         // Email validation
         if (!validateEmail(emailInput.value)) {
-            emailError.textContent = "Please enter a valid email!";
+            emailError.textContent = "Invalid email address.";
             emailError.style.display = "block";
             return;
         }
 
-        // Password check
-        if (passwordInput.value.trim() === "") {
-            passwordError.textContent = "Please enter a password!";
-            passwordError.style.display = "block";
-            return;
-        }
-
-        if (passwordInput.value.length < 6) {
-            passwordError.textContent = "Password must be at least 6 characters long.";
+        // Password validation
+        if (passwordInput.value.trim().length < 6) {
+            passwordError.textContent = "Password must be at least 6 characters.";
             passwordError.style.display = "block";
             return;
         }
