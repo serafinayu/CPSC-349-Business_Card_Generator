@@ -79,6 +79,21 @@ textarea {
     height: 100px;
     resize: vertical;
 }
+.button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: block;
+}
 
 .generate-card-btn {
     margin-top: 30px;
