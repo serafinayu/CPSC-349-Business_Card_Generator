@@ -1,8 +1,7 @@
 /* font-family: 'ADLaM Display'; */
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
-/* font-family: 'Inter', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+/* font-family: 'Courier Prime', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 html, body {
     /* Sets the website to always occupy 100% of the height of the viewport */
     height: 100%;
