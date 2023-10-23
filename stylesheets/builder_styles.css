@@ -11,6 +11,31 @@ body {
     padding: 2% 10%;
 }
 
+.main-header {
+    flex: 0 1 auto;
+}
+
+.logo-text {    
+    padding: 25px 30px;
+
+    background: white;
+    color: black;
+    text-align: left;
+    font-family: 'ADLaM Display';
+    font-size: 40px;
+
+    transition: color 0.3s ease, background-color 0.3s ease;}
+
+.logo-link {
+    text-decoration: none;
+    
+}
+
+.logo-text:hover {
+    color: #3498db;
+    background-color: white;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
