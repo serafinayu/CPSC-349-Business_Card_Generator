@@ -1,3 +1,23 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCYI2ffwdG5S88iVLsCvHjqXiVf5NiMUuk",
+  authDomain: "business-card-generator-483a2.firebaseapp.com",
+  databaseURL: "https://business-card-generator-483a2-default-rtdb.firebaseio.com",
+  projectId: "business-card-generator-483a2",
+  storageBucket: "business-card-generator-483a2.appspot.com",
+  messagingSenderId: "88148754489",
+  appId: "1:88148754489:web:d2699d815575de960c4de8"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Signup page
 document.addEventListener('DOMContentLoaded', function () {
     const joinButton = document.querySelector('.join-button');
     const nameInput = document.getElementById('name');
