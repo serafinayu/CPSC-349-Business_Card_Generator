@@ -1,0 +1,14 @@
+{
+  "rules": {
+    ".read": "now < 1700553600000",  // 2023-11-21
+    ".write": "now < 1700553600000",  // 2023-11-21
+      
+    // Grants write access for authenticates users to /users/<uid>/ where <uid> is the 
+    // ID of the user obtained through Firebase Authentication
+    "users": { 
+      "$uid": {
+        ".write": "$uid === auth.uid"
+    	}
+    }
+  }
+}
