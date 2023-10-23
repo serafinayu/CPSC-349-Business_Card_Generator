@@ -3,12 +3,7 @@ WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (fil
 WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
-21:51:01.025 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-21:51:01.264 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-21:51:03.998 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - business-card-generator-120d7-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 141ms, init: 0ms
-21:51:04.109 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace business-card-generator-120d7-default-rtdb status Active to Active
-21:52:55.957 [FirebaseWorkerPool-1-3] WARN com.firebase.core.persistence.backend.dummy.EmulatorMetadataPersistence - Multiple projectIds are not recommended in single project mode. Requested 
-namespace business-card-generator-120d7, but the emulator is configured for business-card-generator-120d7-default-rtdb. To 
-opt-out of single project mode add/set the singleProjectMode: false property in 
-the firebase.json emulators config. 
-21:52:55.968 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - business-card-generator-120d7 successfully activated FBKV (SurveyIdle(0)) wait: 7ms, init: 0ms
+16:07:59.905 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+16:08:00.067 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+16:08:02.267 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - business-card-generator-120d7-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 98ms, init: 0ms
+16:08:02.366 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace business-card-generator-120d7-default-rtdb status Active to Active

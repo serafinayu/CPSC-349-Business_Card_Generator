@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 // Add SDKs for Firebase products that you want to use
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
-import { getDatabase, ref, set } from "firebase/database";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
+import { getDatabase, ref, set } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -22,7 +22,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase(app);
+const database = getDatabase();
 const infoForm = document.getElementById("infoForm");
 
 // Handle form submission
@@ -40,7 +40,7 @@ infoForm.addEventListener("submit", function (event) {
   // const skills = document.getElementById("skills").value;
 
   // Push data to the database
-  db.ref("users").push({
+  set(ref(database, 'users/'), {
     //   name: name,
     fname: fname,
     lname: lname,
@@ -51,11 +51,8 @@ infoForm.addEventListener("submit", function (event) {
     phone: phone,
     //   skills: skills
   });
-
-  alert("Form submitted successfully!");
-
-  // Clear the form
-  infoForm.reset();
+  
+  window.location.href = "/../final.html";
 });
 
 // infoForm.addEventListener("submit", (e) => {
