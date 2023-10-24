@@ -2,41 +2,44 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Card Generator - Your Business Card</title>
-    <link rel="stylesheet" href="stylesheets/final_styles.css"/>
+    <link rel="stylesheet" href="stylesheets/final_styles.css" />
     <link rel="icon" type="images/x-icon" href="images/favicon.ico">
 </head>
 
 <body>
-    
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
-        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
-        import { getDatabase, ref, set } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAuFs8e9otYS84DrXUnsbDxP59aay2rfI0",
-          authDomain: "business-card-generator-120d7.firebaseapp.com",
-          projectId: "business-card-generator-120d7",
-          storageBucket: "business-card-generator-120d7.appspot.com",
-          messagingSenderId: "230677413050",
-          appId: "1:230677413050:web:58be376af87566665e5683",
-          measurementId: "G-87VKWPXR2B",
-          databaseURL: "https://business-card-generator-120d7-default-rtdb.firebaseio.com/"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const database = getDatabase(app);
-    </script>
+    <div class="business-card-container">
+        <div class="info-container">
+            <div class="profile-pic-container">
+                <img class="profile-pic" src="images/Profile_pic.png" alt="Profile picture" />
+            </div>
+            <div class="details-container">
+                <span class="name">Michelle Barbagallo<br></span>
+                <span class="company">Google Inc.<br></span>
+                <span class="position">Senior Software Engineer<br><br></span>
+                <img class="github-icon" src="images/GitHub_logo.png" alt="GitHub icon" />
+                <span class="github">https://github.com/michellebpro<br></span>
+                <img class="linkedin-icon" src="images/LinkedIn_logo.png" alt="LinkedIn icon" />
+                <span class="linkedin">https://linkedin.com/michellebpro<br></span>
+                <img class="email-icon" src="images/Email_logo.png" alt="Email icon" />
+                <span class="email">michellebpro@google.com<br></span>
+                <img class="phone-icon" src="images/Phone_logo.png" alt="Phone icon" />
+                <span class="phone">+1 (714) 456-1234<br></span>
+            </div>
+            <div class="company-logo-container">
+                <img class="company-logo" src="images/Google_logo.png" alt="Google logo" />
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="skills-text">
+                <span class="skills-label">Skills:<br></span>
+                <span class="skills-desc">JavaScript, HTML/CSS, Python, SQL, Git.</span>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="scripts/final_scripts.js"></script>
 </body>
 
