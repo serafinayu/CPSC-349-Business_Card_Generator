@@ -36,10 +36,10 @@ const infoForm = document.getElementById("infoForm");
 
 emailInput.addEventListener("input", function () {
     if (!emailInput.checkValidity()) {
-        emailError.textContent = "Please enter a valid email address";  
+        emailError.textContent = "Please enter a valid email address";
         emailError.style.display = "block"; // Show the error message
-    } else {    
-        emailError.textContent = "";    
+    } else {
+        emailError.textContent = "";
         emailError.style.display = "none";  // Hide the error message
     }
 });
@@ -61,24 +61,24 @@ infoForm.addEventListener("submit", function (event) {
     const skills = document.getElementById("skills").value;
 
 
-// Push data to the database
-set(ref(database, 'cards/' + uid), {
-    uid: uid,
-    name: name,
-    accountEmail: user.email,
-    company: company,
-    github: github,
-    linkedin: linkedin,
-    title: title,
-    email: email,
-    phone: phone,
-    skills: skills
-});
+    // Push data to the database
+    set(ref(database, 'cards/' + uid), {
+        uid: uid,
+        name: name,
+        accountEmail: user.email,
+        company: company,
+        github: github,
+        linkedin: linkedin,
+        title: title,
+        email: email,
+        phone: phone,
+        skills: skills
+    });
 
-resolveAfter10Seconds();
-alert("Successful");
+    resolveAfter10Seconds();
+    alert("Successful");
 
-window.location.href = "/../final.html";
+    window.location.href = "/../final.html";
 });
 
 function resolveAfter10Seconds() {
