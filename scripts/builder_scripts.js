@@ -23,14 +23,26 @@ const firebaseConfig = {
     databaseURL: "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
 };
 
-    // Initialize Firebase
-    const firebaseApp = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(firebaseApp);
-    const auth = getAuth();
-    const provider = new GoogleAuthProvider();
-    const database = getDatabase();
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseApp);
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
+const database = getDatabase();
+const emailInput = document.getElementById("email");
+const emailError = document.getElementById("email-error");
 
-    const infoForm = document.getElementById("infoForm");
+const infoForm = document.getElementById("infoForm");
+
+emailInput.addEventListener("input", function () {
+    if (!emailInput.checkValidity()) {
+        emailError.textContent = "Please enter a valid email address";  
+        emailError.style.display = "block"; // Show the error message
+    } else {    
+        emailError.textContent = "";    
+        emailError.style.display = "none";  // Hide the error message
+    }
+});
 
 // Handle form submission
 infoForm.addEventListener("submit", function (event) {
@@ -48,24 +60,25 @@ infoForm.addEventListener("submit", function (event) {
     const phone = document.getElementById("phone").value;
     const skills = document.getElementById("skills").value;
 
-    // Push data to the database
-    set(ref(database, 'cards/' + uid), {
-        uid: uid,
-        name: name,
-        accountEmail: user.email,
-        company: company,
-        github: github,
-        linkedin: linkedin,
-        title: title,
-        email: email,
-        phone: phone,
-        skills: skills
-    });
 
-    resolveAfter10Seconds();
-    alert("Successful");
+// Push data to the database
+set(ref(database, 'cards/' + uid), {
+    uid: uid,
+    name: name,
+    accountEmail: user.email,
+    company: company,
+    github: github,
+    linkedin: linkedin,
+    title: title,
+    email: email,
+    phone: phone,
+    skills: skills
+});
 
-    window.location.href = "/../final.html";
+resolveAfter10Seconds();
+alert("Successful");
+
+window.location.href = "/../final.html";
 });
 
 function resolveAfter10Seconds() {
