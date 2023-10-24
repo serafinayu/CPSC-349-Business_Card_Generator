@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 /* font-family: 'Courier Prime', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-html, body {
+
+html,
+body {
     /* Sets the website to always occupy 100% of the height of the viewport */
     height: 100%;
 }
@@ -26,7 +28,7 @@ body {
     flex: 0 1 auto;
 }
 
-.logo-text {    
+.logo-text {
     padding: 10px 30px;
 
     background: white;
@@ -35,11 +37,12 @@ body {
     font-family: 'ADLaM Display';
     font-size: 40px;
 
-    transition: color 0.3s ease, background-color 0.3s ease;}
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
 .logo-link {
     text-decoration: none;
-    
+
 }
 
 .logo-text:hover {
@@ -67,7 +70,8 @@ body {
     background: white;
     color: black;
     text-align: center;
-    font-family: 'Courier Prime', monospace;;
+    font-family: 'Courier Prime', monospace;
+    ;
     font-size: 16px;
     font-weight: 500;
 }
@@ -102,7 +106,8 @@ body {
 /* Styling for the Business Card */
 .business-card-container {
     flex-shrink: 0;
-    width: 735px;  /* proportion 1.75:1.00 */
+    width: 735px;
+    /* proportion 1.75:1.00 */
     height: 420px;
     margin-right: 40px;
 
@@ -151,17 +156,24 @@ body {
     font-weight: 700;
 }
 
-.company, .position {
+.company,
+.position {
     font-size: 16px;
     font-weight: 400;
 }
 
-.github, .linkedin, .email, .phone {
+.github,
+.linkedin,
+.email,
+.phone {
     font-size: 16px;
     font-weight: 400;
 }
 
-.github-icon, .linkedin-icon, .email-icon, .phone-icon {
+.github-icon,
+.linkedin-icon,
+.email-icon,
+.phone-icon {
     display: inline-block;
     object-fit: contain;
     height: 15px;
@@ -190,13 +202,14 @@ body {
     font-family: 'Courier Prime', monospace;
 }
 
-.skills-label, .skills-desc {
+.skills-label,
+.skills-desc {
     font-size: 16px;
     font-weight: 400;
 }
 
 #createAgainBtn {
-    width: 250px;  
+    width: 250px;
     height: 50px;
     margin-top: 50px;
     background-color: #007BFF;

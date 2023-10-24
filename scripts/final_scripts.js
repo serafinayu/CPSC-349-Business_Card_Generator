@@ -18,7 +18,7 @@ const firebaseConfig = {
     appId: "1:230677413050:web:58be376af87566665e5683",
     measurementId: "G-87VKWPXR2B",
     databaseURL:
-      "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+        "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
@@ -28,10 +28,10 @@ const database = getDatabase();
 const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
-    if(user) {
+    if (user) {
         updateCard()
     } else {
-        window.location.href="../index.html"
+        window.location.href = "../index.html"
     };
 });
 
@@ -67,8 +67,8 @@ async function updateCard() {
         } else {
             console.log("No data available");
         }
-        }).catch((error) => {
+    }).catch((error) => {
         console.error(error);
-        });
+    });
 };
 

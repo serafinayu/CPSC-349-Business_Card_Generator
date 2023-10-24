@@ -18,7 +18,7 @@ const firebaseConfig = {
   measurementId: "G-87VKWPXR2B",
   databaseURL:
     "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
-    // "http://127.0.0.1:9000/?ns=business-card-generator-120d7"
+  // "http://127.0.0.1:9000/?ns=business-card-generator-120d7"
 };
 
 // Initialize Firebase
@@ -58,7 +58,7 @@ infoForm.addEventListener("submit", function (event) {
     phone: phone,
     skills: skills
   });
-  
+
   resolveAfter10Seconds();
   alert("Successful");
 
@@ -67,8 +67,8 @@ infoForm.addEventListener("submit", function (event) {
 
 function resolveAfter10Seconds() {
   return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve('Sending data to Firebase');
-      }, 10000);
-    });
+    setTimeout(() => {
+      resolve('Sending data to Firebase');
+    }, 10000);
+  });
 }

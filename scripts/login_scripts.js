@@ -9,15 +9,15 @@ import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/1
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAuFs8e9otYS84DrXUnsbDxP59aay2rfI0",
-  authDomain: "business-card-generator-120d7.firebaseapp.com",
-  projectId: "business-card-generator-120d7",
-  storageBucket: "business-card-generator-120d7.appspot.com",
-  messagingSenderId: "230677413050",
-  appId: "1:230677413050:web:58be376af87566665e5683",
-  measurementId: "G-87VKWPXR2B",
-  databaseURL:
-    "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+    apiKey: "AIzaSyAuFs8e9otYS84DrXUnsbDxP59aay2rfI0",
+    authDomain: "business-card-generator-120d7.firebaseapp.com",
+    projectId: "business-card-generator-120d7",
+    storageBucket: "business-card-generator-120d7.appspot.com",
+    messagingSenderId: "230677413050",
+    appId: "1:230677413050:web:58be376af87566665e5683",
+    measurementId: "G-87VKWPXR2B",
+    databaseURL:
+        "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
@@ -34,26 +34,26 @@ auth.useDeviceLanguage();
 createBtn.style.display = "none";
 
 // Async function in a variable, which returns the authenticated user as the promise
-const userSignIn = async() => {
+const userSignIn = async () => {
     signInWithPopup(auth, provider)
-    .then((result) => {
-        const user = result.user;
-        console.log(user);
-    }).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-    })
+        .then((result) => {
+            const user = result.user;
+            console.log(user);
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        })
 }
 
 // Async function in a variable, which promises to sign the authenticated user out
-const userSignOut = async() => {
+const userSignOut = async () => {
     signOut(auth).then(() => {
         alert("You have signed out successfully");
-    }) .catch((error) => {})
+    }).catch((error) => { })
 }
 
 onAuthStateChanged(auth, (user) => {
-    if(user) {
+    if (user) {
         loginBtn.innerHTML = "Log Out";
         // alert("You have signed in as " + user.displayName);
         alert("You have signed in as " + user.email);

@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 /* font-family: 'Courier Prime', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-html, body {
+
+html,
+body {
     /* Sets the website to always occupy 100% of the height of the viewport */
     height: 100%;
 }
@@ -132,13 +134,14 @@ h2 {
     margin-bottom: 20px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 15px;
     font-size: 1.2em;
     border-radius: 15px;
-    border: 1px solid #ccc;  
-    background: #FFFFFF; 
+    border: 1px solid #ccc;
+    background: #FFFFFF;
     color: #000;
 }
 
@@ -152,7 +155,7 @@ textarea {
 }
 
 #submit {
-    width: 180px;  
+    width: 180px;
     height: 50px;
     margin-top: 20px;
     background-color: #007BFF;
