@@ -168,6 +168,11 @@ textarea {
     display: block;
 }
 
+#submit:hover {
+    background: #3498db;
+    color: #fff;
+}
+
 .generate-card-btn {
     margin-top: 30px;
     padding: 10px 50px;
