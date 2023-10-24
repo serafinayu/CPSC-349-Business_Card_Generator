@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Card Generator - Home</title>
     <link rel="stylesheet" href="stylesheets/landing_styles.css" />
-    <link rel="icon" type="images/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="images/x-icon" href="images/favicon.ico" />
 </head>
 
 <body>
@@ -53,12 +53,23 @@
         </div>
         <div class="advertisement-phrase-container">
             <span class="ads-phrase">Create a Virtual<br>Business Card in<br>Minutes!</span>
-            <button id="createBtn" class="button" onclick="window.location.href = 'builder.html'">Create a business
-                card</button>
+            <button id="createBtn" class="button" onclick="window.location.href = 'builder.html'">
+                Create a Business Card
+            </button><br>
+            <button id="seeMyBusinessCardBtn" class="button" onclick="window.location.href = 'final.html'">
+                See my Business Card
+            </button>
         </div>
     </main>
-    <script type="module" src="scripts/landing_scripts.js"></script>
+
+    <!-- <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
+        import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+        import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
+    </script> -->
     <script type="module" src="scripts/login_scripts.js"></script>
+    <script type="module" src="scripts/landing_scripts.js" defer></script>
 </body>
 
 </html>

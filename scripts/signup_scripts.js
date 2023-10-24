@@ -1,5 +1,7 @@
-// SDK script to connect to Firebase and its features
+// Not being used anymore //
 
+/*
+// SDK script to connect to Firebase and its features
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
@@ -47,3 +49,4 @@ signOut(auth).then(() => {
 
 const submit = document.getElementById("join-button")
 submit.addEventListener("submit", logSubmit);
+*/
