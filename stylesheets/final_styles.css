@@ -13,6 +13,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    justify-content: center;
+    align-items: center;
 
     /* Sets the default font-size of the website */
     font-size: 20px;
@@ -20,4 +22,98 @@ body {
     /* Defines the gradient background of the website */
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
+}
+    /* Styling for the Business Card */
+.business-card-container {
+    flex-shrink: 0;
+    width: 735px;  /* proportion 1.75:1.00 */
+    height: 420px;
+
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: #2A292C;
+}
+
+/* Add hover effect for the business card */
+.business-card-container:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+    margin-top: 40px;
+}
+
+.profile-pic-container {
+    position: relative;
+    margin-left: 40px;
+}
+
+.profile-pic {
+    width: 150px;
+}
+
+.details-container {
+    position: relative;
+    width: 340px;
+    margin-left: 40px;
+    margin-right: 25px;
+
+    color: white;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.company, .position {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.github, .linkedin, .email, .phone {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.github-icon, .linkedin-icon, .email-icon, .phone-icon {
+    display: inline-block;
+    object-fit: contain;
+    height: 15px;
+    width: 30px;
+}
+
+.company-logo-container {
+    position: relative;
+    margin-right: 40px;
+}
+
+.company-logo {
+    width: 100px;
+}
+
+.about-container {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.skills-text {
+    color: white;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.skills-label, .skills-desc {
+    font-size: 16px;
+    font-weight: 400;
 }
