@@ -10,6 +10,16 @@
 </head>
 
 <body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo-text">Business Card Generator</h1>
+        </a>
+    </header>
+
+    <div class="buttons-container">
+        <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+    </div>
+
     <div class="main-container">
 
         <div class="info-section">
@@ -23,34 +33,46 @@
                 <div class="input-columns">
                     <div class="column">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" placeholder="First Name" required>
+                        <input type="text" id="name" placeholder="Your Name" required>
+
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" placeholder="Company Name" required>
 
                         <label for="github">Github:</label>
                         <input type="text" id="github" placeholder="Github Link" required>
 
-                        <label for="title">Title:</label>
-                        <input type="text" id="title" placeholder="Job Title" required>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" placeholder="Email Address" required>
 
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" id="phone" placeholder="Phone Number" required>
+<!--                    <label for="profilePic">Profile Picture:</label> -->
+<!--                    <input type="file" id="profilePic"> --> 
+                      
                     </div>
                     
                     <div class="column">
-                        <label for="lastName">Company:</label>
-                        <input type="text" id="company" placeholder="Company" required>
+
+                        <br><br><br><br><br>
+
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" placeholder="Job Title" required>
+
 
                         <label for="linkedin">LinkedIn:</label>
                         <input type="text" id="linkedin" placeholder="LinkedIn Link" required>
 
-                        <label for="email">Email:</label>
-                        <input type="text" id="email" placeholder="Email Address" required>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" placeholder="Phone Number">
+
+<!--                    <label for="companyLogo">Company Logo:</label> -->
+<!--                    <input type="file" id="companyLogo"> -->
                     </div>
                 </div>
 
-                <label for="skills">Skills:</label>
-                <textarea id="skills" placeholder="List your skills"></textarea>
-                <button type="submit" id="submit" class="button">Submit</button>
-            </form> 
+                <br><label for="skills">Skills:</label><br>
+                <br><textarea id="skills" placeholder="List your skills"></textarea><br>
+
+                <button type="submit" id="submit" class="button" onclick="">Submit</button>
+            </form>
         </div>
     <script type="module" src="scripts/builder_scripts.js"></script>
 </body>

@@ -4,6 +4,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebas
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 import { getDatabase, ref, child, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
+
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
@@ -34,6 +35,7 @@ onAuthStateChanged(auth, (user) => {
     };
 });
 
+
 async function updateCard() {
     const userId = auth.currentUser;
     console.log(userId);
@@ -50,9 +52,9 @@ async function updateCard() {
     const dbRef = ref(database);
     get(child(dbRef, "cards/" + userId.uid)).then((snapshot) => {
         if (snapshot.exists()) {
-            // cardData = snapshot.val();
-            // console.log(snapshot.val());
-            // console.log(snapshot.val().accountEmail);
+            // cardData = snapshot.val(); won't work for some reason
+            // console.log(snapshot.val()); prints out the data in the console.log
+            // console.log(snapshot.val().accountEmail); successfully prints only the accountEmail
             name.innerHTML = snapshot.val().name;
             company.innerHTML = snapshot.val().company;
             position.innerHTML = snapshot.val().title;
@@ -70,18 +72,3 @@ async function updateCard() {
         });
 };
 
-
-// (function (window) {
-//     const dbRef = ref(database);
-    // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
-//     // get(dbRef, 'cards/' + uid).then((snapshot) => {
-//     get(dbRef, 'cards/').then((snapshot) => {
-//     if (snapshot.exists()) {
-//         console.log(snapshot.val());
-//     } else {
-//         console.log("No data available");
-//     }
-//     }).catch((error) => {
-//     console.error(error);
-//     });
-// })(window);
