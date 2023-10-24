@@ -48,7 +48,6 @@ body {
 }
 
 /* Styling for the Login and Signup buttons */
-/*
 .buttons-container {
     flex: 0 1 auto;
     display: flex;
@@ -77,18 +76,11 @@ body {
     margin-right: 20px;
 }
 
-#signupButton {
-    margin-right: 20px;
-}
-*/
-
 /* Add hover effect for the buttons */
-/*
 .button:hover {
     background: #3498db;
     color: #fff;
 }
-*/
 
 /* Sets flexbox properties of main content */
 .main-content {
