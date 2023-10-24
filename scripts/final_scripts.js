@@ -22,5 +22,17 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase();
 
+(function (window) {
+    const dbRef = ref(getDatabase());
+    // get(child(dbRef, `users/${userId}`)).then((snapshot) => {
+    get(dbRef, `users/`).then((snapshot) => {
+    if (snapshot.exists()) {
+        console.log(snapshot.val());
+    } else {
+        console.log("No data available");
+    }
+    }).catch((error) => {
+    console.error(error);
+    });
+})(window);

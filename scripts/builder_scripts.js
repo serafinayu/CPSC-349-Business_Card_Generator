@@ -16,7 +16,8 @@ const firebaseConfig = {
   appId: "1:230677413050:web:58be376af87566665e5683",
   measurementId: "G-87VKWPXR2B",
   databaseURL:
-    "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+    // "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+    "http://127.0.0.1:9000/?ns=business-card-generator-120d7"
 };
 
 // Initialize Firebase
@@ -40,7 +41,7 @@ infoForm.addEventListener("submit", function (event) {
   // const skills = document.getElementById("skills").value;
 
   // Push data to the database
-  set(ref(database, 'users/'), {
+  set(ref(database, 'cards/'), {
     //   name: name,
     fname: fname,
     lname: lname,
@@ -52,6 +53,8 @@ infoForm.addEventListener("submit", function (event) {
     //   skills: skills
   });
   
+  alert("Successful");
+
   window.location.href = "/../final.html";
 });
 

@@ -1,40 +1,59 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const loginButton = document.querySelector('.login-button');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const emailError = document.getElementById('emailError');
-    const passwordError = document.getElementById('passwordError');
+// Import the functions you need from the SDKs you need
+// Add SDKs for Firebase products that you want to use
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-    loginButton.addEventListener('click', function (event) {
-        event.preventDefault();
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAuFs8e9otYS84DrXUnsbDxP59aay2rfI0",
+  authDomain: "business-card-generator-120d7.firebaseapp.com",
+  projectId: "business-card-generator-120d7",
+  storageBucket: "business-card-generator-120d7.appspot.com",
+  messagingSenderId: "230677413050",
+  appId: "1:230677413050:web:58be376af87566665e5683",
+  measurementId: "G-87VKWPXR2B",
+  databaseURL:
+    "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+};
 
-        // Clear previous messages
-        emailError.textContent = "";
-        emailError.style.display = "none";
-        passwordError.textContent = "";
-        passwordError.style.display = "none";
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth();
+const provider = new GoogleAuthProvider()
+const database = getDatabase();
+const loginBtn = document.getElementById("loginButton");
 
-        // Email validation
-        if (!validateEmail(emailInput.value)) {
-            emailError.textContent = "Please enter a valid email!";
-            emailError.style.display = "block";
-            return;
-        }
+// Apply the default browser's preferred language
+auth.useDeviceLanguage();
 
-        // Password check
-        if (passwordInput.value.trim() === "") {
-            passwordError.textContent = "Please enter a password!";
-            passwordError.style.display = "block";
-            return;
-        }
-
-        storeEmail(emailInput.value);
-        //code to navigate to another page when successful login
-    });
-});
-
-function validateEmail(email) {
-    // Email validation regex
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return regex.test(email);
+const userSignIn = async() => {
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        const user = result.user;
+        console.log(user);
+    }).catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+    })
 }
+const userSignOut = async() => {
+    signOut(auth).then(() => {
+        alert("You have signed out successfully");
+    }) .catch((error) => {})
+}
+
+onAuthStateChanged(auth, (user) => {
+    if(user) {
+        alert("You have signed in!")
+    } else {
+        alert("You are signed out.")
+    }
+})
+
+loginBtn.addEventListener("click", userSignIn);
+// Need to create a sign out button 
