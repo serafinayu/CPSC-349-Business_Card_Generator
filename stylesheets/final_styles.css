@@ -12,8 +12,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    justify-content: center;
-    align-items: center;
 
     /* Sets the default font-size of the website */
     font-size: 20px;
@@ -22,11 +20,92 @@ body {
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
 }
-    /* Styling for the Business Card */
+
+/* Styling for the logo-text */
+.main-header {
+    flex: 0 1 auto;
+}
+
+.logo-text {    
+    padding: 10px 30px;
+
+    background: white;
+    color: black;
+    text-align: left;
+    font-family: 'ADLaM Display';
+    font-size: 40px;
+
+    transition: color 0.3s ease, background-color 0.3s ease;}
+
+.logo-link {
+    text-decoration: none;
+    
+}
+
+.logo-text:hover {
+    color: #3498db;
+    background-color: white;
+}
+
+/* Styling for the Login and Signup buttons */
+/*
+.buttons-container {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.button {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#loginButton {
+    margin-right: 20px;
+}
+
+#signupButton {
+    margin-right: 20px;
+}
+*/
+
+/* Add hover effect for the buttons */
+/*
+.button:hover {
+    background: #3498db;
+    color: #fff;
+}
+*/
+
+/* Sets flexbox properties of main content */
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Styling for the Business Card */
 .business-card-container {
     flex-shrink: 0;
     width: 735px;  /* proportion 1.75:1.00 */
     height: 420px;
+    margin-right: 40px;
 
     border-radius: 30px;
     border: 1px solid #000;
@@ -60,12 +139,12 @@ body {
 .details-container {
     position: relative;
     width: 340px;
-    margin-left: 40px;
+    margin-left: 5px;
     margin-right: 25px;
 
     color: white;
     text-align: left;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Courier Prime', monospace;
 }
 
 .name {
@@ -109,7 +188,7 @@ body {
 .skills-text {
     color: white;
     text-align: left;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Courier Prime', monospace;
 }
 
 .skills-label, .skills-desc {
