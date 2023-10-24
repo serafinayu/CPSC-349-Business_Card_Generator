@@ -13,7 +13,6 @@ function displayCardData() {
         document.querySelector(".skills-desc").textContent = cardData.skills;
         document.querySelector(".company").textContent = cardData.company;
     }
-
     const profilePicBase64 = sessionStorage.getItem("profilePicBase64");
     if (profilePicBase64) {
         document.querySelector(".profile-pic").src = profilePicBase64;

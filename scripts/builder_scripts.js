@@ -24,18 +24,19 @@ document.getElementById("submit").addEventListener("click", function() {
             phone: document.getElementById("phone").value,
             title: document.getElementById("title").value,
             skills: document.getElementById("skills").value,
-            company: document.getElementById("company").value,
+            company: document.getElementById("company").value
         };
     
         // Save the collected data to sessionStorage
         sessionStorage.setItem("cardData", JSON.stringify(cardData));
-
+    
         // Save the uploaded images to sessionStorage
         saveImageToSessionStorage("profilePic", "profilePicBase64");
         saveImageToSessionStorage("companyLogo", "companyLogoBase64");
     
-        // Redirect to final.html or whatever processing you have
+        // Redirect to final.html
         window.location.href = "./final.html";
     }
+
     collectFormData();
 });
