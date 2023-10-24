@@ -2,21 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 /* font-family: 'Courier Prime', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-
-body {
-    font-family: 'Courier Prime', monospace;
-    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
-    background-attachment: fixed;
-    color: #FFFFFF;
-    margin: 0;
+html, body {
+    /* Sets the website to always occupy 100% of the height of the viewport */
+    height: 100%;
 }
 
+body {
+    /* Sets the website to Flexbox */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    /* Sets the default font settings */
+    font-family: 'Courier Prime', monospace;
+    color: #FFFFFF;
+
+    /* Defines the gradient background of the website */
+    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    background-attachment: fixed;
+}
+
+/* Styling for the logo-text */
 .main-header {
     flex: 0 1 auto;
 }
 
-.logo-text {    
-    padding: 25px 30px;
+.logo-text {
+    padding: 10px 30px;
 
     background: white;
     color: black;
@@ -24,11 +36,11 @@ body {
     font-family: 'ADLaM Display';
     font-size: 40px;
 
-    transition: color 0.3s ease, background-color 0.3s ease;}
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
 .logo-link {
     text-decoration: none;
-    
 }
 
 .logo-text:hover {
@@ -36,26 +48,59 @@ body {
     background-color: white;
 }
 
+/* Styling for the Login and Login button */
+.buttons-container {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-bottom: 25px;
+    margin-top: 7px;
+}
+
+#loginButton {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    font-weight: 500;
+
+    margin-right: 20px;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; 
+    justify-content: center;
     align-items: flex-start;
-    width: 100%;
+    align-content: center;
+    flex-wrap: wrap;
     gap: 5%;
     padding: 2% 10%;
 }
 
 .info-section {
-    flex: 1;
-    margin-left: 0%;
+    width: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 500px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .card-inputs {
-    flex: 2;
     display: flex;
     flex-direction: column;
+    width: 640px;
     gap: 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .input-columns {
@@ -68,6 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 290px;
 }
 
 h1 {
@@ -78,6 +124,13 @@ h1 {
 h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
+}
+
+#profilePic, #companyLogo {
+    width: 640px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 640px
 }
 
 input, textarea {
@@ -93,11 +146,14 @@ input, textarea {
 textarea {
     height: 100px;
     resize: vertical;
-    width: 50%;    
+    width: 640px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 640px
 }
 
-.button {
-    width: 50%;  
+#submit {
+    width: 180px;  
     height: 50px;
     margin-top: 20px;
     background-color: #007BFF;

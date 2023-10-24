@@ -47,7 +47,7 @@ body {
     background-color: white;
 }
 
-/* Styling for the Login and Signup buttons */
+/* Styling for the Login and Login button */
 .buttons-container {
     flex: 0 1 auto;
     display: flex;
