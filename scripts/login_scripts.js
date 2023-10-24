@@ -27,10 +27,13 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider()
 const database = getDatabase();
 const loginBtn = document.getElementById("loginButton");
+const createBtn = document.getElementById("createBtn");
 
 // Apply the default browser's preferred language
 auth.useDeviceLanguage();
+createBtn.style.display = "none";
 
+// Async function in a variable, which returns the authenticated user as the promise
 const userSignIn = async() => {
     signInWithPopup(auth, provider)
     .then((result) => {
@@ -41,6 +44,8 @@ const userSignIn = async() => {
         const errorMessage = error.message;
     })
 }
+
+// Async function in a variable, which promises to sign the authenticated user out
 const userSignOut = async() => {
     signOut(auth).then(() => {
         alert("You have signed out successfully");
@@ -49,11 +54,15 @@ const userSignOut = async() => {
 
 onAuthStateChanged(auth, (user) => {
     if(user) {
-        alert("You have signed in!")
+        loginBtn.innerHTML = "Log Out";
+        // alert("You have signed in as " + user.displayName);
+        alert("You have signed in as " + user.email);
+        loginBtn.addEventListener("click", userSignOut);
+        createBtn.style.display = "block";
+        // createBtn.addEventListener("click", window.location.href="/builder.html")
     } else {
-        alert("You are signed out.")
+        loginBtn.innerHTML = "Login/Sign Up";
+        loginBtn.addEventListener("click", userSignIn);
+        createBtn.style.display = "none";
     }
 })
-
-loginBtn.addEventListener("click", userSignIn);
-// Need to create a sign out button 
