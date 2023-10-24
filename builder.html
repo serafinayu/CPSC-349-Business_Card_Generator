@@ -10,15 +10,20 @@
 </head>
 
 <body>
-    <div class="main-container">
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo-text">Business Card Generator</h1>
+        </a>
+    </header>
 
-        <div class="info-section">
-            <h1>It only takes minutes to create your own business card!</h1>
-        </div>
+    <form action="#" method="post">
+        <div class="main-container">
+            <div class="info-section">
+                <h1>It only takes minutes to create your own business card!</h1>
+            </div>
 
-        <div class="card-inputs">
-            <h2>Fill out form below:</h2>
-
+            <div class="card-inputs">
+                <h2>Fill out form below:</h2>
             <div class="input-columns">
                 <div class="column">
                     <label for="firstName">First name:</label>
@@ -55,13 +60,9 @@
                 </div>
             </div>
 
-            <label for="skills">Skills:</label>
-            <textarea id="skills" placeholder="List your skills"></textarea>
-            <button id="submit" class="button" onclick="window.location.href='./final.html';">Submit</button>
-            
         </div>
 
-    </div>
+    </form>
     <script src="scripts/builder_scripts.js"></script>
 </body>
 

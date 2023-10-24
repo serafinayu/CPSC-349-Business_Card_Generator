@@ -1,14 +1,39 @@
 /* font-family: 'ADLaM Display'; */
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
-/* font-family: 'Inter', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Courier Prime', monospace; */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Courier Prime', monospace;
     background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
     background-attachment: fixed;
     color: #FFFFFF;
-    padding: 2% 10%;
+    margin: 0;
+}
+
+.main-header {
+    flex: 0 1 auto;
+}
+
+.logo-text {    
+    padding: 25px 30px;
+
+    background: white;
+    color: black;
+    text-align: left;
+    font-family: 'ADLaM Display';
+    font-size: 40px;
+
+    transition: color 0.3s ease, background-color 0.3s ease;}
+
+.logo-link {
+    text-decoration: none;
+    
+}
+
+.logo-text:hover {
+    color: #3498db;
+    background-color: white;
 }
 
 .main-container {
@@ -17,7 +42,8 @@ body {
     justify-content: flex-start; 
     align-items: flex-start;
     width: 100%;
-    gap: 5%;    
+    gap: 5%;
+    padding: 2% 10%;
 }
 
 .info-section {
@@ -64,25 +90,14 @@ input, textarea {
     color: #000;
 }
 
-input,
-textarea {
-    width: 100%;
-    padding: 15px;
-    font-size: 1em;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    background: #FFFFFF;
-    color: #000;
-}
-
 textarea {
     height: 100px;
     resize: vertical;
+    width: 50%;    
 }
+
 .button {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 50%;  
     height: 50px;
     margin-top: 20px;
     background-color: #007BFF;
