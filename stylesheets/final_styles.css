@@ -221,3 +221,8 @@ body {
     transition: background-color 0.2s;
     display: block;
 }
+
+#createAgainBtn:hover {
+    background: #3498db;
+    color: #fff;
+}

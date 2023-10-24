@@ -179,18 +179,16 @@ export function finalPageAuth() {
     const userSignOut = async () => {
         signOut(auth).then(() => {
             alert("You have signed out successfully");
+            window.location.href = "../index.html"
         }).catch((error) => { })
     }
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
             loginBtn.innerHTML = "Log Out";
-            //alert("You have signed in as " + user.displayName);
-            alert("You have signed in as " + user.email);
             loginBtn.addEventListener("click", userSignOut);
         } else {
-            loginBtn.innerHTML = "Login/Sign Up";
-            loginBtn.addEventListener("click", userSignIn);
+            window.location.href = "../index.html"
         }
     })
 }
