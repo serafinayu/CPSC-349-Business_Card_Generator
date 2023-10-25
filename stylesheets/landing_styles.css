@@ -229,8 +229,8 @@ body {
 
 .step {
     text-align: center;
-    flex: 1;  /* Makes each step occupy equal width */
-    margin: 0 10px;  /* Spacing between steps */
+    flex: 1;
+    margin: 0 10px;
 }
 
 .step img {
