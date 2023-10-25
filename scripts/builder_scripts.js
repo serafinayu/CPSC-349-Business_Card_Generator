@@ -1,14 +1,19 @@
-// Import the functions you need from the SDKs you need
-// Add SDKs for Firebase products that you want to use
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-import { getDatabase, ref, set } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
+import { builderPageAuth } from './login_scripts.js';
+
+console.log("Running builder_scripts.js to initialize needed modules");
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    builderPageAuth();
+});
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
+
   apiKey: "AIzaSyAuFs8e9otYS84DrXUnsbDxP59aay2rfI0",
   authDomain: "business-card-generator-120d7.firebaseapp.com",
   projectId: "business-card-generator-120d7",
@@ -16,21 +21,49 @@ const firebaseConfig = {
   messagingSenderId: "230677413050",
   appId: "1:230677413050:web:58be376af87566665e5683",
   measurementId: "G-87VKWPXR2B",
-  databaseURL:
-    "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
+  databaseURL: "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 const auth = getAuth();
+const provider = new GoogleAuthProvider();
+const database = getDatabase();
+const emailInput = document.getElementById("email");
+const emailError = document.getElementById("email-error");
+
 const infoForm = document.getElementById("infoForm");
 
-infoForm.addEventListener("submit", function (event) {
-  event.preventDefault();
 
-  const user = auth.currentUser;
-  const uid = user.uid;
+emailInput.addEventListener("input", function () {
+    if (!emailInput.checkValidity()) {
+        emailError.textContent = "Please enter a valid email address";
+        emailError.style.display = "block"; // Show the error message
+    } else {
+        emailError.textContent = "";
+        emailError.style.display = "none";  // Hide the error message
+    }
+});
+
+// Handle form submission
+
+infoForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const user = auth.currentUser;
+    const uid = user.uid;
+
+    const name = document.getElementById("name").value;
+    const github = document.getElementById("github").value;
+    const linkedin = document.getElementById("linkedin").value;
+    const company = document.getElementById("company").value;
+    const title = document.getElementById("title").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const skills = document.getElementById("skills").value;
+
 
   const database = getDatabase();
   const name = document.getElementById("name").value;
@@ -63,13 +96,12 @@ infoForm.addEventListener("submit", function (event) {
   .catch((error)=>{
     alert("Unsuccessful, error:" + error)
   });
-  
 });
 
 function resolveAfter10Seconds() {
-  return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve('Sending data to Firebase');
-      }, 10000);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('Sending data to Firebase');
+        }, 10000);
     });
 }

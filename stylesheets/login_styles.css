@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 /* font-family: 'Courier Prime', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
 html,
 body {
     height: 100%;
@@ -25,7 +26,7 @@ body {
     flex: 0 1 auto;
 }
 
-.logo-text {    
+.logo-text {
     padding: 25px 30px;
 
     background: white;
@@ -34,11 +35,12 @@ body {
     font-family: 'ADLaM Display';
     font-size: 40px;
 
-    transition: color 0.3s ease, background-color 0.3s ease;}
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
 .logo-link {
     text-decoration: none;
-    
+
 }
 
 .logo-text:hover {
@@ -73,7 +75,7 @@ body {
     margin: 40px;
     font-size: 2em;
     color: #FFFFFF;
-    
+
 }
 
 .inputs {
