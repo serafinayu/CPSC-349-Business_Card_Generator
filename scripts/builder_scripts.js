@@ -55,6 +55,7 @@ infoForm.addEventListener("submit", function (event) {
     const user = auth.currentUser;
     const uid = user.uid;
 
+    const database = getDatabase();
     const name = document.getElementById("name").value;
     const github = document.getElementById("github").value;
     const linkedin = document.getElementById("linkedin").value;
@@ -63,17 +64,6 @@ infoForm.addEventListener("submit", function (event) {
     const email = document.getElementById("email").value;
     const phone = document.getElementById("phone").value;
     const skills = document.getElementById("skills").value;
-
-
-  const database = getDatabase();
-  const name = document.getElementById("name").value;
-  const github = document.getElementById("github").value;
-  const linkedin = document.getElementById("linkedin").value;
-  const company = document.getElementById("company").value;
-  const title = document.getElementById("title").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const skills = document.getElementById("skills").value;
 
   set(ref(database, "cards/" + uid), {
     uid: uid,
