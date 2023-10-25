@@ -3,11 +3,7 @@ WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (fil
 WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
-18:57:27.454 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-18:57:27.625 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
-18:57:35.784 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - business-card-generator-120d7-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 98ms, init: 0ms
-18:57:35.849 [NamespaceSystem-blocking-namespace-operation-dispatcher-7] INFO com.firebase.core.namespace.StateManager - Namespace business-card-generator-120d7-default-rtdb status Active to Active
-19:09:58.265 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
-19:09:58.283 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: business-card-generator-120d7-default-rtdb
-19:09:58.294 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for business-card-generator-120d7-default-rtdb
-19:09:58.298 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.
+23:07:34.568 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+23:07:34.712 [main] INFO com.firebase.server.forge.App$ - Listening at 127.0.0.1:9000
+23:07:42.897 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO com.firebase.core.namespace.NamespaceActor - business-card-generator-120d7-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 94ms, init: 0ms
+23:07:42.948 [NamespaceSystem-blocking-namespace-operation-dispatcher-6] INFO com.firebase.core.namespace.StateManager - Namespace business-card-generator-120d7-default-rtdb status Active to Active
