@@ -65,12 +65,14 @@ export function homePageAuth() {
             //alert("You have signed in as " + user.displayName);
             alert("You have signed in as " + user.email);
             loginBtn.removeEventListener("click", userSignIn);
+            loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignOut);
             createBtn.style.display = "block";
             seeMyBusinessCardBtn.style.display = "block"
             //createBtn.addEventListener("click", window.location.href="/builder.html")
         } else {
             loginBtn.innerHTML = "Login/Sign Up";
+            loginBtn.removeEventListener("click", userSignIn);
             loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignIn);
             createBtn.style.display = "none";
@@ -130,6 +132,8 @@ export function builderPageAuth() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             loginBtn.innerHTML = "Log Out";
+            loginBtn.removeEventListener("click", userSignIn);
+            loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignOut);
         } else {
             window.location.href = "../index.html"
@@ -188,6 +192,8 @@ export function finalPageAuth() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             loginBtn.innerHTML = "Log Out";
+            loginBtn.removeEventListener("click", userSignIn);
+            loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignOut);
         } else {
             window.location.href = "../index.html"

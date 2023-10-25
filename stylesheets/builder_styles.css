@@ -20,7 +20,8 @@ body {
     color: #FFFFFF;
 
     /* Defines the gradient background of the website */
-    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    /* background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%); */
+    background: linear-gradient(180deg, rgba(170, 170, 170, 1) 9.9%, #535E64 100%);
     background-attachment: fixed;
 }
 
@@ -124,6 +125,10 @@ body {
     width: 290px;
 }
 
+.form-label {
+    font-size: 20px;
+}
+
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -138,7 +143,7 @@ input,
 textarea {
     width: 100%;
     padding: 15px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     border-radius: 15px;
     border: 1px solid #ccc;
     background: #FFFFFF;
