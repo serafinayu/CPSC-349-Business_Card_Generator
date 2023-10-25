@@ -59,14 +59,14 @@ async function updateCard() {
             console.log(snapshot.val());
             console.log(snapshot.val().accountEmail);
             console.log(snapshot.val().name);
-            name.innerHTML = snapshot.val().name;
-            company.innerHTML = snapshot.val().company;
-            position.innerHTML = snapshot.val().title;
-            github.innerHTML = snapshot.val().github;
-            linkedin.innerHTML = snapshot.val().linkedin;
-            email.innerHTML = snapshot.val().email;
-            phone.innerHTML = snapshot.val().phone;
-            skills.innerHTML = snapshot.val().skills;
+            name.textContent = snapshot.val().name;
+            company.textContent = snapshot.val().company;
+            position.textContent = snapshot.val().title;
+            github.textContent = snapshot.val().github;
+            linkedin.textContent = snapshot.val().linkedin;
+            email.textContent = snapshot.val().email;
+            phone.textContent = snapshot.val().phone;
+            skills.textContent = snapshot.val().skills;
             // console.log(cardData.accountEmail);
         } else {
             console.log("No data available");
