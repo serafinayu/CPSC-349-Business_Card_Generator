@@ -18,24 +18,21 @@ const firebaseConfig = {
   measurementId: "G-87VKWPXR2B",
   databaseURL:
     "https://business-card-generator-120d7-default-rtdb.firebaseio.com/",
-    // "http://127.0.0.1:9000/?ns=business-card-generator-120d7"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const database = getDatabase();
 const auth = getAuth();
 const infoForm = document.getElementById("infoForm");
 
-
-// Handle form submission
 infoForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const user = auth.currentUser;
   const uid = user.uid;
 
+  const database = getDatabase();
   const name = document.getElementById("name").value;
   const github = document.getElementById("github").value;
   const linkedin = document.getElementById("linkedin").value;
@@ -45,8 +42,7 @@ infoForm.addEventListener("submit", function (event) {
   const phone = document.getElementById("phone").value;
   const skills = document.getElementById("skills").value;
 
-  // Push data to the database
-  set(ref(database, 'cards/' + uid), {
+  set(ref(database, "cards/" + uid), {
     uid: uid,
     name: name,
     accountEmail: user.email,
@@ -57,12 +53,17 @@ infoForm.addEventListener("submit", function (event) {
     email: email,
     phone: phone,
     skills: skills
+  })
+  .then(()=> {
+    resolveAfter10Seconds();
+    alert("Successful");
+  
+    window.location.href = "/../final.html";
+  })
+  .catch((error)=>{
+    alert("Unsuccessful, error:" + error)
   });
   
-  resolveAfter10Seconds();
-  alert("Successful");
-
-  window.location.href = "/../final.html";
 });
 
 function resolveAfter10Seconds() {

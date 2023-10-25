@@ -9,7 +9,8 @@
   },
   "database": {
     "rules": "database.rules.json"
-  },
+  }
+,
   "emulators": {
     "auth": {
       "port": 9099

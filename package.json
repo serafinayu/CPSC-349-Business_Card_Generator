@@ -1,4 +1,7 @@
 {
+  "name": "business_card_generator",
+  "version": "1.0.0",
+  "author": "CPSC-349-01 Fall 2023 Group 5 - 505 Internal Server Error",
   "dependencies": {
     "firebase": "^10.5.0",
     "type": "module"
