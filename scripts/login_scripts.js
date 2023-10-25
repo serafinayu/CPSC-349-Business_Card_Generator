@@ -132,6 +132,8 @@ export function builderPageAuth() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             loginBtn.innerHTML = "Log Out";
+            loginBtn.removeEventListener("click", userSignIn);
+            loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignOut);
         } else {
             window.location.href = "../index.html"
@@ -190,6 +192,8 @@ export function finalPageAuth() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             loginBtn.innerHTML = "Log Out";
+            loginBtn.removeEventListener("click", userSignIn);
+            loginBtn.removeEventListener("click", userSignOut);
             loginBtn.addEventListener("click", userSignOut);
         } else {
             window.location.href = "../index.html"
