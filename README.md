@@ -17,10 +17,12 @@ This is a simple web-based tool for generating an online business card. Users ar
 
 ## Notes ##
 
+* Website deployed link: https://business-card-generator-120d7.firebaseapp.com/
+
 ## HTML Structure ##
 
-* index.html serves as the landing page for our website. 
-* signup.html allows users to create an account
-* login.html allows existing user logins into their accounts and access all features of the site
-* builder.html allows existing users to fillout a pre-determined form with their personal information
+* index.html serves as the landing page for our website.
+  * Login via Google Authentication to access the service.
+* builder.html allows existing users to fill out a pre-determined form with their personal information.
+  * User can also upload a custom profile picture image and company logo image.
 * final.html is the result of filling out the previous form. Information is used to generate business card.
