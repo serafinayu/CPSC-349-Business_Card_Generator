@@ -6,6 +6,12 @@ import { getDownloadURL, ref as sRef, getStorage, uploadBytes } from "https://ww
 import { finalPageAuth } from './login_scripts.js';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+console.log("Running final_scripts.js to initialize needed modules");
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    finalPageAuth();
+});
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -24,12 +30,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase();
 const auth = getAuth();
-
-console.log("Running final_scripts.js to initialize needed modules");
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    finalPageAuth();
-});
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
