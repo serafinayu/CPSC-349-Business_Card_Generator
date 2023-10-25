@@ -2,6 +2,7 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebas
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 import { getDatabase, ref, child, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
+import { getDownloadURL, ref as sRef, getStorage, uploadBytes } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-storage.js"
 import { finalPageAuth } from './login_scripts.js';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -39,9 +40,11 @@ onAuthStateChanged(auth, (user) => {
 });
 
 async function updateCard() {
+    // Store the user id of the current authorized user
     const userId = auth.currentUser;
     console.log(userId);
     console.log(userId.uid);
+    // Store all text field elements
     const name = document.getElementById("name");
     const company = document.getElementById("company");
     const position = document.getElementById("position");
@@ -50,12 +53,21 @@ async function updateCard() {
     const email = document.getElementById("email");
     const phone = document.getElementById("phone");
     const skills = document.getElementById("skills");
-
+    // Store the image field elements
+    let pic = document.getElementById("profPic");
+    let logo = document.getElementById("coLogo");
+    // Create a reference to the database
     const dbRef = ref(database);
+    // Initialize firebase storage
+    const storage = getStorage();
     
+    
+    // Referencing the current user's uid, get a snapshot of the data in that location of the database
     get(child(dbRef, "cards/" + userId.uid)).then((snapshot) => {
         if (snapshot.exists()) {
+            // I tried to store snapshot.val() into a variable but was having issues with it
             // cardData = snapshot.val();
+            // For testing purposes to the console, print some results of the snapshot
             console.log(snapshot.val());
             console.log(snapshot.val().accountEmail);
             console.log(snapshot.val().name);
@@ -63,11 +75,19 @@ async function updateCard() {
             company.innerHTML = snapshot.val().company;
             position.innerHTML = snapshot.val().title;
             github.innerHTML = snapshot.val().github;
-            linkedin.innerHTML = snapshot.val().linkedin;
+            linkedin.innerHTML = snapshot.val().linkedin;   
             email.innerHTML = snapshot.val().email;
             phone.innerHTML = snapshot.val().phone;
             skills.innerHTML = snapshot.val().skills;
-            // console.log(cardData.accountEmail);
+            
+            const profPicRef = sRef(storage, "images/profilePics/" + auth.currentUser.uid + "/" + snapshot.val().profPicName)
+            getDownloadURL(profPicRef).then(function(url) {
+                pic.src = url;
+            })
+            const coLogoRef = sRef(storage, "images/companyLogos/" + auth.currentUser.uid + "/" + snapshot.val().coLogoName)
+            getDownloadURL(coLogoRef).then(function(url) {
+                logo.src = url;
+            })
         } else {
             console.log("No data available");
         }

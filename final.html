@@ -21,18 +21,12 @@
     </div>
 
     <main class="main-content">
-
-        <div>
-            <h2 id="subtitle">Here is your Business Card:</h2>
-        </div>
-
         <div class="business-card-container">
             <div class="info-container">
                 <div class="profile-pic-container">
-                    <img class="profile-pic" src="images/Profile_pic.png" alt="Profile picture" />
+                    <img id="profPic" class="profile-pic" src="images/Profile_pic.png" alt="Profile picture" />
                 </div>
                 <div class="details-container">
-
                     <span id="name" class="name"><br></span>
                     <span id="company" class="company"><br></span>
                     <span id="position" class="position"><br><br></span>
@@ -44,10 +38,9 @@
                     <span id="email" class="email"><br></span>
                     <img class="phone-icon" src="images/Phone_logo.png" alt="Phone icon" />
                     <span id="phone" class="phone"><br></span>
-
                 </div>
                 <div class="company-logo-container">
-                    <img class="company-logo" src="images/Google_logo.png" alt="Google logo" />
+                    <img id="coLogo" class="company-logo" src="images/Google_logo.png" alt="Google logo" />
                 </div>
             </div>
             <div class="about-container">
@@ -57,15 +50,9 @@
                 </div>
             </div>
         </div>
-
-        <button id="createAgainBtn" type="button" class="button" onclick="window.location.href = 'builder.html'">
-            Create a New Card
-        </button>
-
     </main>
 
-    <script type="module" src="scripts/login_scripts.js"></script>
-    <script type="module" src="scripts/final_scripts.js" defer></script>
+    <script type="module" src="scripts/final_scripts.js"></script>
 </body>
 
 </html>
