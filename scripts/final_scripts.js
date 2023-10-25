@@ -52,7 +52,7 @@ async function updateCard() {
     const skills = document.getElementById("skills");
 
     const dbRef = ref(database);
-    
+
     get(child(dbRef, "cards/" + userId.uid)).then((snapshot) => {
         if (snapshot.exists()) {
             // cardData = snapshot.val();
@@ -75,4 +75,3 @@ async function updateCard() {
         console.error(error);
     });
 };
-
