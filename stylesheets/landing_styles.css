@@ -219,3 +219,22 @@ body {
     border-left: 0px;
     align-content: center;
 }
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.step {
+    text-align: center;
+    flex: 1;  /* Makes each step occupy equal width */
+    margin: 0 10px;  /* Spacing between steps */
+}
+
+.step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
