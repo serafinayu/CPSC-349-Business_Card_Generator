@@ -19,7 +19,8 @@ body {
     font-size: 20px;
 
     /* Defines the gradient background of the website */
-    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    /* background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%); */
+    background: linear-gradient(180deg, rgba(170, 170, 170, 1) 9.9%, #535E64 100%);
     background-attachment: fixed;
 }
 
@@ -42,7 +43,6 @@ body {
 
 .logo-link {
     text-decoration: none;
-
 }
 
 .logo-text:hover {
@@ -71,7 +71,6 @@ body {
     color: black;
     text-align: center;
     font-family: 'Courier Prime', monospace;
-    ;
     font-size: 16px;
     font-weight: 500;
 }
