@@ -70,6 +70,8 @@ async function updateCard() {
             // console.log(cardData.accountEmail);
         } else {
             console.log("No data available");
+            alert("You don't have a Business Card yet, create one now.");
+            window.location.href = "../builder.html"
         }
     }).catch((error) => {
         console.error(error);
