@@ -3,12 +3,7 @@ import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 import { getDatabase, ref, child, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
 import { finalPageAuth } from './login_scripts.js';
-
-console.log("Running final_scripts.js to initialize needed modules");
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    finalPageAuth();
-});
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -28,6 +23,12 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase();
 const auth = getAuth();
+
+console.log("Running final_scripts.js to initialize needed modules");
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    finalPageAuth();
+});
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -51,11 +52,13 @@ async function updateCard() {
     const skills = document.getElementById("skills");
 
     const dbRef = ref(database);
+    
     get(child(dbRef, "cards/" + userId.uid)).then((snapshot) => {
         if (snapshot.exists()) {
-            // cardData = snapshot.val(); won't work for some reason
-            // console.log(snapshot.val()); prints out the data in the console.log
-            // console.log(snapshot.val().accountEmail); successfully prints only the accountEmail
+            // cardData = snapshot.val();
+            console.log(snapshot.val());
+            console.log(snapshot.val().accountEmail);
+            console.log(snapshot.val().name);
             name.innerHTML = snapshot.val().name;
             company.innerHTML = snapshot.val().company;
             position.innerHTML = snapshot.val().title;
@@ -72,3 +75,4 @@ async function updateCard() {
         console.error(error);
     });
 };
+
