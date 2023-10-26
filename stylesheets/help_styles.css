@@ -1,0 +1,44 @@
+/* Reset some default styles for consistency */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page-specific styles */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.content-container h2 {
+    font-size: 32px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.content-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer .footer-link {
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer .footer-link:hover {
+    color: #3498db;
+}
