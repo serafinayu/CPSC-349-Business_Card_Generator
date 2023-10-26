@@ -97,3 +97,27 @@ async function updateCard() {
         console.error(error);
     });
 };
+
+// ... Your existing code
+
+function generateDownloadableCardWithLinkedCSS() {
+    const businessCardContainer = document.querySelector('.business-card-container');
+    const cardContent = businessCardContainer.outerHTML;
+
+    // Create a Blob with the HTML content
+    const blob = new Blob([cardContent], { type: 'text/html' });
+
+    // Create a URL for the Blob
+    const url = URL.createObjectURL(blob);
+
+    return url;
+}
+
+const downloadLink = document.querySelector('#download-link');
+
+downloadLink.addEventListener('click', function () {
+    const downloadableCardURL = generateDownloadableCardWithLinkedCSS();
+    this.href = downloadableCardURL;
+});
+
+
