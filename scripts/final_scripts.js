@@ -99,13 +99,181 @@ async function updateCard() {
 };
 
 // ... Your existing code
+// ... Your existing code
 
 function generateDownloadableCardWithLinkedCSS() {
     const businessCardContainer = document.querySelector('.business-card-container');
-    const cardContent = businessCardContainer.outerHTML;
+    const cardContent = document.createElement('html');
+    const html = document.createElement('html');
+
+    // Clone the business card container to ensure you don't modify the original
+    const clonedBusinessCard = businessCardContainer.cloneNode(true);
+
+    // Create a <style> element and set the CSS content
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+    /* font-family: 'ADLaM Display'; */
+    @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+    /* font-family: 'Courier Prime', monospace; */
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+    
+    html,
+    body {
+        /* Sets the website to always occupy 100% of the height of the viewport */
+        height: 100%;
+    }
+    
+    body {
+        /* Sets the website to Flexbox */
+        font-size: 20px;
+        /* Defines the gradient background of the website */
+        /* background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%); */
+        background: linear-gradient(180deg, rgba(170, 170, 170, 1) 9.9%, #535E64 100%);
+        background-attachment: fixed;
+            
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+    
+    /* Styling for the logo-text */
+    .main-header {
+        flex: 0 1 auto;
+    }
+    
+    #subtitle {
+        font-family: 'Courier Prime', monospace;
+        color: #FFFFFF;
+        font-size: 40px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    
+    /* Sets flexbox properties of main content */
+    .main-content {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    /* Styling for the Business Card */
+    .business-card-container {
+        flex-shrink: 0;
+        width: 735px;
+        /* proportion 1.75:1.00 */
+        height: 420px;
+        margin-right: 40px;
+    
+        border-radius: 30px;
+        border: 1px solid #000;
+        background: #2A292C;
+    }
+    
+    /* Add hover effect for the business card */
+    .business-card-container:hover {
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
+        transition: box-shadow 0.3s ease;
+    }
+    
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        position: relative;
+        margin-top: 40px;
+    }
+    
+    .profile-pic-container {
+        position: relative;
+        margin-left: 40px;
+    }
+    
+    .profile-pic {
+        width: 150px;
+    }
+    
+    .details-container {
+        position: relative;
+        width: 340px;
+        margin-left: 5px;
+        margin-right: 25px;
+    
+        color: white;
+        text-align: left;
+        font-family: 'Courier Prime', monospace;
+    }
+    
+    .name {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    
+    .company,
+    .position {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .github,
+    .linkedin,
+    .email,
+    .phone {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .github-icon,
+    .linkedin-icon,
+    .email-icon,
+    .phone-icon {
+        display: inline-block;
+        object-fit: contain;
+        height: 15px;
+        width: 30px;
+    }
+    
+    .company-logo-container {
+        position: relative;
+        margin-right: 40px;
+    }
+    
+    .company-logo {
+        width: 100px;
+    }
+    
+    .about-container {
+        position: relative;
+        margin-top: 30px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    
+    .skills-text {
+        color: white;
+        text-align: left;
+        font-family: 'Courier Prime', monospace;
+    }
+    
+    .skills-label,
+    .skills-desc {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    `;
+
+    // Append the <style> element and the cloned business card content
+    cardContent.appendChild(styleElement);
+    cardContent.appendChild(clonedBusinessCard);
 
     // Create a Blob with the HTML content
-    const blob = new Blob([cardContent], { type: 'text/html' });
+    const blob = new Blob([cardContent.outerHTML], { type: 'text/html' });
 
     // Create a URL for the Blob
     const url = URL.createObjectURL(blob);
@@ -119,5 +287,3 @@ downloadLink.addEventListener('click', function () {
     const downloadableCardURL = generateDownloadableCardWithLinkedCSS();
     this.href = downloadableCardURL;
 });
-
-

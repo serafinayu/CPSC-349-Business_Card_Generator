@@ -221,7 +221,41 @@ body {
     display: block;
 }
 
+.bttmButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* To space the buttons apart */
+}
+.button-link {
+    width: 250px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: #007BFF;
+    color: #FFFFFF;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    text-decoration: none;
+}
+
+.button-link,
+.button {
+    margin: 50px; /* Adjust the margin to increase or decrease spacing */
+    /* Other button styles */
+}
+
 #createAgainBtn:hover {
+    background: #3498db;
+    color: #fff;
+}
+.button-link:hover {
     background: #3498db;
     color: #fff;
 }
