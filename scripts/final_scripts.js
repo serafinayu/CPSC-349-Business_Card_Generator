@@ -98,9 +98,7 @@ async function updateCard() {
     });
 };
 
-// ... Your existing code
-// ... Your existing code
-
+// Function to generate download
 function generateDownloadableCardWithLinkedCSS() {
     const businessCardContainer = document.querySelector('.business-card-container');
     const cardContent = document.createElement('html');
