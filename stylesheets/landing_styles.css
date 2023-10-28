@@ -50,12 +50,21 @@ body {
     background-color: white;
 }
 
+.menu-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 /* Styling for Home, About Us, and FAQ buttons */
 .footer-link {
     outline: none;
     border-style: none;
     border-radius: 25px;
     padding: 10px 20px;
+    margin-left: 20px;
     width: auto;
     cursor: pointer;
 
@@ -69,12 +78,17 @@ body {
 }
 
 .footer-link:hover {
-    color: #3498db;
+    background: #3498db;
+    color: #fff;
 }
 
+.footer {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
 
 /* Styling for the Login and Signup buttons */
-.buttons-container {
+.buttons-login {
     flex: 0 1 auto;
     display: flex;
     justify-content: flex-end;
@@ -129,7 +143,6 @@ body {
     /* proportion 1.75:1.00 */
     height: 420px;
     margin-right: 40px;
-
     border-radius: 30px;
     border: 1px solid #000;
     background: #2A292C;
@@ -145,7 +158,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     position: relative;
     margin-top: 40px;
 }
