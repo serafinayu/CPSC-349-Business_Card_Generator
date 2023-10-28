@@ -50,6 +50,29 @@ body {
     background-color: white;
 }
 
+/* Styling for Home, About Us, and FAQ buttons */
+.footer-link {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: auto;
+    cursor: pointer;
+
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #3498db;
+}
+
+
 /* Styling for the Login and Signup buttons */
 .buttons-container {
     flex: 0 1 auto;
