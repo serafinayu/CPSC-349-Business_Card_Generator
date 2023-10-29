@@ -286,6 +286,8 @@ async function updateCard() {
 //     this.href = downloadableCardURL;
 // });
 
+// Function to download Business Card in PNG image file
+// Try to solve cross-origin restrictions for Profile Pic and Company Logo later
 document.getElementById('download-link').addEventListener('click', generateImage);
 
 function generateImage() {
