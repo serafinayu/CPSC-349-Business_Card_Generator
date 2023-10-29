@@ -249,6 +249,15 @@ body {
     display: block;
 }
 
+.auth-user-btns-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
 .createBtn {
     display: block;
     border-left: 0px;
