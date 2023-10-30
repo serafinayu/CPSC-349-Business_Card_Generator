@@ -7,6 +7,10 @@ html,
 body {
     /* Sets the website to always occupy 100% of the height of the viewport */
     height: 100%;
+    /* Defines the gradient background of the website */
+    /* background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%); */
+    background: linear-g  radient(180deg, rgba(170, 170, 170, 1) 9.9%, #535E64 100%);
+    background-attachment: fixed;
 }
 
 body {
@@ -17,10 +21,6 @@ body {
 
     /* Sets the default font-size of the website */
     font-size: 20px;
-
-    /* Defines the gradient background of the website */
-    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
-    background-attachment: fixed;
 }
 
 /* Styling for the logo-text */
@@ -42,7 +42,6 @@ body {
 
 .logo-link {
     text-decoration: none;
-
 }
 
 .logo-text:hover {
@@ -50,8 +49,45 @@ body {
     background-color: white;
 }
 
+.menu-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Styling for Home, About Us, and FAQ buttons */
+.footer-link {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    width: auto;
+    cursor: pointer;
+
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.footer {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
 /* Styling for the Login and Signup buttons */
-.buttons-container {
+.buttons-login {
     flex: 0 1 auto;
     display: flex;
     justify-content: flex-end;
@@ -71,7 +107,6 @@ body {
     color: black;
     text-align: center;
     font-family: 'Courier Prime', monospace;
-    ;
     font-size: 16px;
     font-weight: 500;
 }
@@ -106,8 +141,9 @@ body {
     width: 735px;
     /* proportion 1.75:1.00 */
     height: 420px;
-    margin-right: 40px;
-
+    /* margin-right: 40px; */
+    margin: 0 40px 4% 0;
+    /* margin-bottom: 3%; */
     border-radius: 30px;
     border: 1px solid #000;
     background: #2A292C;
@@ -123,7 +159,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     position: relative;
     margin-top: 40px;
 }
@@ -215,8 +250,36 @@ body {
     display: block;
 }
 
+.auth-user-btns-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
 .createBtn {
     display: block;
     border-left: 0px;
     align-content: center;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.step {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
