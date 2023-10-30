@@ -4,10 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 .faq-content {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     margin: 20px 50px 0px;
     padding: 30px;
     background-color: #2A292C;
     height: 100%;
+    opacity: 0.75;
     color: rgba(255, 255, 255, 0.842);
 }
 
