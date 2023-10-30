@@ -16,28 +16,43 @@
         </a>
     </header>
 
-    <div class="buttons-container">
-        <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+    <div class="menu-container">
+        <footer class="footer">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="help.html" class="footer-link">Help and FAQ</a>
+        </footer>
+
+        <div class="buttons-login">
+            <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+        </div>
     </div>
 
     <main class="main-content">
+
+        <div>
+            <h2 id="subtitle">Here is your Business Card:</h2>
+        </div>
+
         <div class="business-card-container">
             <div class="info-container">
                 <div class="profile-pic-container">
                     <img id="profPic" class="profile-pic" src="images/Profile_pic.png" alt="Profile picture" />
                 </div>
                 <div class="details-container">
-                    <span id="name" class="name"><br></span>
-                    <span id="company" class="company"><br></span>
-                    <span id="position" class="position"><br><br></span>
+
+                    <span id="name" class="name">-</span><br>
+                    <span id="company" class="company">-</span><br>
+                    <span id="position" class="position">-</span><br><br>
                     <img class="github-icon" src="images/GitHub_logo.png" alt="GitHub icon" />
-                    <span id="github" class="github"><br></span>
+                    <span id="github" class="github">-</span><br>
                     <img class="linkedin-icon" src="images/LinkedIn_logo.png" alt="LinkedIn icon" />
-                    <span id="linkedin" class="linkedin"><br></span>
+                    <span id="linkedin" class="linkedin">-</span><br>
                     <img class="email-icon" src="images/Email_logo.png" alt="Email icon" />
-                    <span id="email" class="email"><br></span>
+                    <span id="email" class="email">-</span><br>
                     <img class="phone-icon" src="images/Phone_logo.png" alt="Phone icon" />
-                    <span id="phone" class="phone"><br></span>
+                    <span id="phone" class="phone">-</span><br>
+
                 </div>
                 <div class="company-logo-container">
                     <img id="coLogo" class="company-logo" src="images/Google_logo.png" alt="Google logo" />
@@ -46,13 +61,25 @@
             <div class="about-container">
                 <div class="skills-text">
                     <span class="skills-label">Skills:<br></span>
-                    <span id="skills" class="skills-desc">JavaScript, HTML/CSS, Python, SQL, Git.</span>
+                    <span id="skills" class="skills-desc">-</span>
                 </div>
             </div>
         </div>
+
+        <div class="bttmButtons">
+            <button id="createAgainBtn" type="button" class="button-link" onclick="window.location.href = 'builder.html'">
+                Create a New Card
+            </button>
+
+            <a href="#" id="download-link">Download Business Card</a>
+
+        </div>
+
     </main>
 
-    <script type="module" src="scripts/final_scripts.js"></script>
+    <script type="module" src="scripts/login_scripts.js"></script>
+    <script type="module" src="scripts/final_scripts.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </body>
 
 </html>

@@ -16,10 +16,17 @@
         </a>
     </header>
 
-    <div class="buttons-container">
-        <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+    <div class="menu-container">
+        <footer class="footer">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="help.html" class="footer-link">Help and FAQ</a>
+        </footer>
+        <div class="buttons-login">
+            <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+        </div>
     </div>
-
+    
     <div class="main-container">
 
         <div class="info-section">
@@ -33,45 +40,43 @@
                 <div class="input-columns">
                     <div class="column">
 
-                        <label for="name">Name:</label>
+                        <label class="form-label" for="name">Name:</label>
                         <input type="text" id="name" placeholder="Your Name" required />
 
-                        <label for="company">Company:</label>
+                        <label class="form-label" for="company">Company:</label>
                         <input type="text" id="company" placeholder="Company Name" required />
 
-                        <label for="github">Github:</label>
+                        <label class="form-label" for="github">Github:</label>
                         <input type="text" id="github" placeholder="Github Link" required />
 
-                        <label for="email">Email:</label>
+                        <label class="form-label" for="email">Email:</label>
                         <input type="email" id="email" placeholder="Email Address" required title="Please"
                             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" />
                         <span id="email-error" class="error-message"></span>
 
-                        <label for="profilePic">Profile Picture:</label>
-                        <input type="file" accept="image" id="profilePic">
+                        <label class="form-label" for="profilePic">Profile Picture:</label>
+                        <input type="file" accept="image/*" id="profilePic">
 
                     </div>
 
-                    <div class="column">
+                    <div class="column2">
 
-                        <br><br><br><br><br>
-
-                        <label for="title">Title:</label>
+                        <label class="form-label" for="title">Title:</label>
                         <input type="text" id="title" placeholder="Job Title" required />
 
-                        <label for="linkedin">LinkedIn:</label>
+                        <label class="form-label" for="linkedin">LinkedIn:</label>
                         <input type="text" id="linkedin" placeholder="LinkedIn Link" required />
 
-                        <label for="phone">Phone Number:</label>
+                        <label class="form-label" for="phone">Phone Number:</label>
                         <input type="text" id="phone" placeholder="Phone Number" required />
 
-                        <label for="companyLogo">Company Logo:</label>
-                        <input type="file" accept="image" id="companyLogo">
+                        <label class="form-label" for="companyLogo">Company Logo:</label>
+                        <input type="file" accept="image/*" id="companyLogo">
 
                     </div>
                 </div>
 
-                <br><label for="skills">Skills:</label><br>
+                <br><label class="form-label" for="skills">Skills:</label><br>
                 <br><textarea id="skills" placeholder="List your skills" required></textarea><br>
 
                 <button type="submit" id="submit" class="button" onclick="">Submit</button>

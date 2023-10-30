@@ -6,6 +6,12 @@ import { getDownloadURL, ref as sRef, getStorage, uploadBytes } from "https://ww
 import { finalPageAuth } from './login_scripts.js';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+console.log("Running final_scripts.js to initialize needed modules");
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    finalPageAuth();
+});
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -24,12 +30,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase();
 const auth = getAuth();
-
-console.log("Running final_scripts.js to initialize needed modules");
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    finalPageAuth();
-});
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -83,16 +83,65 @@ async function updateCard() {
             const profPicRef = sRef(storage, "images/profilePics/" + auth.currentUser.uid + "/" + snapshot.val().profPicName)
             getDownloadURL(profPicRef).then(function(url) {
                 pic.src = url;
-            })
+                pic.setAttribute('crossorigin', 'anonymous');  // Set crossorigin attribute
+            });
             const coLogoRef = sRef(storage, "images/companyLogos/" + auth.currentUser.uid + "/" + snapshot.val().coLogoName)
             getDownloadURL(coLogoRef).then(function(url) {
                 logo.src = url;
-            })
+                logo.setAttribute('crossorigin', 'anonymous');  // Set crossorigin attribute
+            });
         } else {
             console.log("No data available");
+            alert("You don't have a Business Card yet, create one now.");
+            window.location.href = "../builder.html";
         }
     }).catch((error) => {
         console.error(error);
     });
 };
 
+// Function to download Business Card in PNG image file
+// CORS configured to solve cross origin issues
+document.getElementById('download-link').addEventListener('click', generateImage);
+
+function generateImage() {
+    var element = document.querySelector('.business-card-container');
+
+    const images = document.querySelectorAll('.business-card-container img');
+    let loadedImages = 0;
+
+    images.forEach(img => {
+        if (img.complete && img.naturalHeight !== 0) {
+            loadedImages++;
+        } else {
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === images.length) {
+                    // All images are loaded, now capture the canvas
+                    captureCanvas();
+                }
+            };
+        }
+    });
+
+    // If all images are already loaded, capture the canvas immediately
+    if (loadedImages === images.length) {
+        captureCanvas();
+    }
+
+    function captureCanvas() {
+        html2canvas(element, {
+            useCORS: true,
+            allowTaint: false,
+            logging: true
+        }).then(canvas => {
+            var imgData = canvas.toDataURL('image/png');
+            var link = document.createElement('a');
+            link.download = 'business-card.png';
+            link.href = imgData;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+}

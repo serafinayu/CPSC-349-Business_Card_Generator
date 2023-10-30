@@ -17,10 +17,34 @@ This is a simple web-based tool for generating an online business card. Users ar
 
 ## Notes ##
 
-## HTML Structure ##
+* Website deployed link: https://business-card-generator-120d7.firebaseapp.com/
 
-* index.html serves as the landing page for our website. 
-* signup.html allows users to create an account
-* login.html allows existing user logins into their accounts and access all features of the site
-* builder.html allows existing users to fillout a pre-determined form with their personal information
-* final.html is the result of filling out the previous form. Information is used to generate business card.
+## Introduction ##
+The “Create Your Own Downloadable Business Card” project aims to provide users with a user-friendly and intuitive web application for designing and generating their very own business card. This design overview outlines the concept, goals of the project, with a focus on user experience, functionality, and design considerations.
+Project Goals
+
+* The primary objectives of this project are as follows:
+* Ease of Use: To offer a simple, intuitive, and user-friendly interface for users to effortlessly customize their own business card.
+* Downloadable Business Card: To provide users with the ability to download their designed business card in HTML form for digital sharing.
+* Responsive Designs: To ensure that the web application is accessible and functional across various devices and screen sizes, including desktops and smartphones.
+* User Registration and Authentication: To allow users to create accounts, log in, and save their card design for future editing and retrieval.
+
+## Getting Started ##
+
+Before you’re able to access the website fully, you need to create an account:
+* On the landing page, click the ‘Login/Sign Up’ button.
+* Provide your email and choose a secure password through the Google Authenticator.
+* If you already have an account, follow the same steps above. 
+
+## Make a Card ##
+* Once you’re logged in, you'll be prompted with two options:
+* If you have never created a business card, you can create one by clicking 'Create a Business Card'. If you choose 'See my Business Card', you'll be prompted to fill out a form containing your personal information.
+* Once you finish inputting your information, click 'Submit' to submit your form to our database.
+* You can then click 'See my Business Card' to view your online business card
+
+## Download Card ##
+You can download your personalized business card once you have submiting your form to the database.
+* Click on 'See my Business Card', and you will have two options. You can download your file by clicking 'Download file', or generate a new business card by clicking 'Create a New Card'. Keep in mind that creating a new business card will replace your previous card.
+
+## Share Your New Card ##
+Feel free you use your new online business card a and share it with those around you!

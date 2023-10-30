@@ -16,27 +16,33 @@
         </a>
     </header>
 
-    <div class="buttons-container">
-        <button id="loginButton" type="button" class="button">Login/Sign Up</button>
-        <!-- <button id="signupButton" class="button" onclick="window.location.href='./signup.html';">Sign Up</button> -->
+    <div class="menu-container">
+        <footer class="footer">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="help.html" class="footer-link">Help and FAQ</a>
+        </footer>
+        <div class="buttons-login">
+            <button id="loginButton" type="button" class="button">Login/Sign Up</button>
+        </div>
     </div>
 
     <main class="main-content">
         <div class="business-card-container">
             <div class="info-container">
                 <div class="profile-pic-container">
-                    <img class="profile-pic" src="images/Profile_pic.png" alt="Profile picture" />
+                    <img class="profile-pic" src="images/5.jpg" alt="Profile picture" />
                 </div>
                 <div class="details-container">
-                    <span class="name">Michelle Barbagallo<br></span>
+                    <span class="name">Michael Barbagallo<br></span>
                     <span class="company">Google Inc.<br></span>
                     <span class="position">Senior Software Engineer<br><br></span>
                     <img class="github-icon" src="images/GitHub_logo.png" alt="GitHub icon" />
-                    <span class="github">github.com/michellebpro<br></span>
+                    <span class="github">github.com/michaelbarbagallo<br></span>
                     <img class="linkedin-icon" src="images/LinkedIn_logo.png" alt="LinkedIn icon" />
-                    <span class="linkedin">linkedin.com/michellebpro<br></span>
+                    <span class="linkedin">linkedin.com/michaelbarbagallo<br></span>
                     <img class="email-icon" src="images/Email_logo.png" alt="Email icon" />
-                    <span class="email">michellebpro@google.com<br></span>
+                    <span class="email">michaelbarbagallo@google.com<br></span>
                     <img class="phone-icon" src="images/Phone_logo.png" alt="Phone icon" />
                     <span class="phone">+1 (714) 456-1234<br></span>
                 </div>
@@ -53,21 +59,34 @@
         </div>
         <div class="advertisement-phrase-container">
             <span class="ads-phrase">Create a Virtual<br>Business Card in<br>Minutes!</span>
-            <button id="createBtn" class="button" onclick="window.location.href = 'builder.html'">
-                Create a Business Card
-            </button><br>
-            <button id="seeMyBusinessCardBtn" class="button" onclick="window.location.href = 'final.html'">
-                See my Business Card
-            </button>
+
+            <div class="steps-container">
+                <div class="step">
+                    <img src="images/form_icon.png" alt="Form icon">
+                    <p>1. Fill out your info</p>
+                </div>
+                <div class="step">
+                    <img src="images/camera_icon.png" alt="Camera icon">
+                    <p>2. Choose your pics</p>
+                </div>
+                <div class="step">
+                    <img src="images/download_icon.png" alt="Download icon">
+                    <p>3. Download and share</p>
+                </div>
+            </div>
+
+            <div class="auth-user-btns-container">
+                <button id="createBtn" class="button" onclick="window.location.href = 'builder.html'">
+                    Create a Business Card
+                </button><br>
+                <button id="seeMyBusinessCardBtn" class="button" onclick="window.location.href = 'final.html'">
+                    See my Business Card
+                </button>
+            </div>
+
         </div>
     </main>
 
-    <!-- <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js';
-        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js';
-        import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-        import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js';
-    </script> -->
     <script type="module" src="scripts/login_scripts.js"></script>
     <script type="module" src="scripts/landing_scripts.js" defer></script>
 </body>

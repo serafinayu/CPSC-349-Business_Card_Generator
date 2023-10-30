@@ -20,7 +20,8 @@ body {
     color: #FFFFFF;
 
     /* Defines the gradient background of the website */
-    background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%);
+    /* background: linear-gradient(180deg, #535E64 9.9%, rgba(83, 94, 100, 0.00) 100%); */
+    background: linear-gradient(180deg, rgba(170, 170, 170, 1) 9.9%, #535E64 100%);
     background-attachment: fixed;
 }
 
@@ -50,17 +51,54 @@ body {
     background-color: white;
 }
 
-/* Styling for the Login and Login button */
-.buttons-container {
+.menu-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Styling for Home, About Us, and FAQ buttons */
+.footer-link {
+    outline: none;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    width: auto;
+    cursor: pointer;
+
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.footer {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* Styling for the Login and Signup buttons */
+.buttons-login {
     flex: 0 1 auto;
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
     margin-bottom: 25px;
-    margin-top: 7px;
 }
 
-#loginButton {
+.button {
     outline: none;
     border-style: none;
     border-radius: 25px;
@@ -74,12 +112,18 @@ body {
     font-family: 'Courier Prime', monospace;
     font-size: 16px;
     font-weight: 500;
+}
 
+#loginButton {
+    margin-right: 20px;
+}
+
+#signupButton {
     margin-right: 20px;
 }
 
 /* Add hover effect for the buttons */
-#loginButton:hover {
+.button:hover {
     background: #3498db;
     color: #fff;
 }
@@ -124,7 +168,20 @@ body {
     width: 290px;
 }
 
-h1 {
+.column2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 290px;
+    margin-top: 65px;
+}
+
+
+.form-label {
+    font-size: 20px;
+}
+
+/* h1 {
     font-size: 3em;
     margin-bottom: 20px;
 }
@@ -132,13 +189,13 @@ h1 {
 h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
-}
+} */
 
 input,
 textarea {
     width: 100%;
     padding: 15px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     border-radius: 15px;
     border: 1px solid #ccc;
     background: #FFFFFF;

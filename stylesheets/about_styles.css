@@ -126,18 +126,11 @@ body {
     color: #fff;
 }
 
-#subtitle {
-    font-family: 'Courier Prime', monospace;
-    color: #FFFFFF;
-    font-size: 40px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-
 /* Sets flexbox properties of main content */
 .main-content {
     flex: 1 1 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -149,7 +142,6 @@ body {
     width: 735px;
     /* proportion 1.75:1.00 */
     height: 420px;
-
     border-radius: 30px;
     border: 1px solid #000;
     background: #2A292C;
@@ -165,7 +157,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     position: relative;
     margin-top: 40px;
 }
@@ -247,79 +238,37 @@ body {
     font-weight: 400;
 }
 
-#createAgainBtn {
-    width: 250px;
-    height: 50px;
-    margin-top: 50px;
-    background-color: #007BFF;
+/* Styling for Advertisement Phrase */
+.ads-phrase {
     color: #FFFFFF;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    font-family: 'Courier Prime', monospace;
+    font-size: 70px;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     display: block;
 }
 
-.bttmButtons {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: row;
-    justify-content: center;
+.createBtn {
+    display: block;
+    border-left: 0px;
     align-content: center;
-    flex-wrap: wrap;
-    width: 735px;
-    gap: 50px;
 }
 
-.button-link {
-    width: 300px;
-    height: 50px;
-    margin-top: 50px;
-    background-color: #007BFF;
-    color: #FFFFFF;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.step {
     text-align: center;
-    font-family: 'Courier Prime', monospace;
-    text-decoration: none;
+    flex: 1;
+    margin: 0 10px;
 }
 
-#download-link {
-    width: 300px;
+.step img {
+    width: 50px;
     height: 50px;
-    margin-top: 50px;
-    background-color: #007BFF;
-    color: #FFFFFF;
-    font-size: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Vertical centering */
-    justify-content: center; /* Horizontal centering */
-    text-align: center;
-    font-family: 'Courier Prime', monospace;
-    text-decoration: none;
-}
-
-#download-link:hover {
-    background: #3498db;
-    color: #fff;
-}
-
-#createAgainBtn:hover {
-    background: #3498db;
-    color: #fff;
-}
-.button-link:hover {
-    background: #3498db;
-    color: #fff;
+    margin-bottom: 10px;
 }
