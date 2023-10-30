@@ -3,9 +3,8 @@
 /* font-family: 'Courier Prime', monospace; */
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-.faq-content {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+.faq-content {    
+    border-radius: 25px;
     margin: 20px 50px 0px;
     padding: 30px;
     background-color: #2A292C;
