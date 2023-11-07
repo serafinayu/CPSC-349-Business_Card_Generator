@@ -34,17 +34,21 @@ Project Goals
 Before you’re able to access the website fully, you need to create an account:
 * On the landing page, click the ‘Login/Sign Up’ button.
 * Provide your email and choose a secure password through the Google Authenticator.
-* If you already have an account, follow the same steps above. 
+* If you already have an account, follow the same steps above.
+* ![Login](https://github.com/serafinayu/CPSC-349-Business_Card_Generator/assets/51179577/cf43d368-f0ba-4daa-8fef-dbee55b9a038)
+
 
 ## Make a Card ##
 * Once you’re logged in, you'll be prompted with two options:
 * If you have never created a business card, you can create one by clicking 'Create a Business Card'. If you choose 'See my Business Card', you'll be prompted to fill out a form containing your personal information.
 * Once you finish inputting your information, click 'Submit' to submit your form to our database.
 * You can then click 'See my Business Card' to view your online business card
+* 
 
 ## Download Card ##
 You can download your personalized business card once you have submiting your form to the database.
 * Click on 'See my Business Card', and you will have two options. You can download your file by clicking 'Download file', or generate a new business card by clicking 'Create a New Card'. Keep in mind that creating a new business card will replace your previous card.
+* 
 
 ## Share Your New Card ##
 Feel free you use your new online business card a and share it with those around you!
